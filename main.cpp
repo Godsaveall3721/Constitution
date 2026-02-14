@@ -3,47 +3,10 @@
 
 #include <iostream>
 #include <random>
+#include <memory>
+#include "main.hpp"
 
-#define party_default 5
-// Far_Right 0
-// Right_Wing 1
-// Centrist 2
-// Left_Wing 3
-// Far_Left 4
-#define party_preference_default 1
-
-namespace base_function {
-
-    // 命名空间函数重载为原理的参数重载（局限，死板）
-    inline int vs1(const int x, const int y) { return x>y ? x : y; }
-    inline float vs1(const float x, const float y) { return x>y ? x : y; }
-    inline double vs1(const double x, const double y) { return x>y ? x : y; }
-    inline long double vs1(const long double x, const long double y) { return x>y ? x : y; }
-
-    // 模板函数重载(入/出参数重载灵活多变)
-    template<typename x, typename y>
-    constexpr auto vs2(x&& a, y&& b) -> decltype(a + b) {
-        return a>b ? a : b;
-    }
-
-    // my diy模板
-    template<typename x = void>
-    struct MyPlus;
-    template<>
-    struct MyPlus<void> {
-        template<typename a, typename b>
-        constexpr auto operator()(a&& x, b&& y) const
-        -> decltype(std::forward<a>(x) + std::forward<b>(y))
-        {
-            return std::forward<a>(x) + std::forward<b>(y);
-        }
-    };
-
-}
-
-
-
-namespace myfun {
+namespace constitution  {
 
 uint8_t party = party_default;
 uint8_t party_preference = party_preference_default;
@@ -250,43 +213,76 @@ private:
     double *F = nullptr; // 勿忘NULL的诞生，歧义之 int 0
 };
 
-//
-// // 议会选举与总统选举至少间隔一年（杜绝议会解散，总统辞职）
-// class Parliamentary_mode : public elections_fun { // 上次议会选举中附加“下次民选President”项没有过半
-// public:
-//     Parliamentary_mode():elections_fun(false) {
-//         this -> F = get_prt_fun();
-//     };
-//     bool do_elections() const override final {
-//         std::cout << "总统选举,间选模式,晴雨表(右到左): " << std::endl;
-//         for (uint8_t i = 0;i < party; i++) {
-//             std::cout << F[i] << "      ";
-//         }
-//         std::cout << std::endl;
-//     }
-//     ~Parliamentary_mode() override final {
-//         this -> F = nullptr;
-//     }
-// private:
-//     double *F = nullptr; // 勿忘NULL的诞生，歧义之 int 0
-// };
-//
-//
-//     class Presidential_mode : public elections_fun { // 上次议会选举中附加“下次民选President”项过半
-//     public:
-//         Presidential_mode():elections_fun(true) {};
-//         ~Presidential_mode() override final = default;
-// };
-//
-//
-//     class dual_leadership_mode : public elections_fun { // 上次议会选举中附加“下次民选President”项过半,但是
-//     public:
-//         dual_leadership_mode():elections_fun(true) {};
-//         ~dual_leadership_mode() override final = default;
-// };
+    // 第一步：实现行政单位抽象层的构建
+    // 共和国----大区-------省--------省区---公社
+    //               \
+    //                \----广域市-----------公社
+    class AdministrativeUnit {
+    public:
+        std::string name;
+        std::string capital;
+        uint64_t population;
+        AdministrativeUnit(const std::string& the_name, const std::string& the_capital) : name(the_name),capital(the_capital) {
+            name = the_name;
+            capital = the_capital;
+        }
+        virtual ~AdministrativeUnit() = default;
+    };
 
+    class Commune : public AdministrativeUnit {
+    public:
+        // 市长兼公社委员会主席
+        std::string Maire_est_egalement_Preseidente_of_Municipal_Council;
+
+        // 任期 7 年
+        const int termYears = 7;
+
+        Commune(const std::string& name, const std::string& Subprefecture) : AdministrativeUnit(name, Subprefecture) {}
+    };
+
+    class Arrondissement_of_Depaertment : AdministrativeUnit {
+    public:
+        std::string Sous_Prefet;
+        std::vector<std::shared_ptr<Commune>> communes;
+        Arrondissement_of_Depaertment(const std::string& name, const std::string& Sous_prefecture) : AdministrativeUnit(name, Sous_prefecture) {}
+
+    };
+
+    class Depaertment : AdministrativeUnit {
+        std::string prefet;
+        std::string Preseidente_of_Depaertmental_Conseil;
+        std::vector<std::shared_ptr<Arrondissement_of_Depaertment>> Arrondissement_of_Depaertments;
+        Depaertment(const std::string& name, const std::string& Prefectures) : AdministrativeUnit(name, Prefectures) {}
+    };
+
+    class Metropolitan_Citta : AdministrativeUnit {
+        std::string Preseidente_of_Conseil_Delle_Metropolitan_Citta;
+        std::vector<std::shared_ptr<Commune>> communes;
+        Metropolitan_Citta(const std::string& name, const std::string& Central_City) : AdministrativeUnit(name, Central_City) {}
+    };
+
+    class Region : public AdministrativeUnit {
+    public:
+        std::string Prefet_of_Region; // 大区区长
+        std::string Preseidente_of_Regional_Conseil; // 大区议会主席
+        std::vector<std::shared_ptr<Depaertment>> depaertments;
+        std::vector<std::shared_ptr<Metropolitan_Citta>> metropolitan_cittas;
+        Region(const std::string& name, const std::string& Prefectures) : AdministrativeUnit(name, Prefectures) {}
+    };
+
+    class Republic : AdministrativeUnit {
+    public:
+        std::string President;
+        std::string Prime_Minister;
+        std::vector<std::shared_ptr<Region>> regions;
+        Republic(const std::string& name, const std::string capital) : AdministrativeUnit(name, capital) {}
+
+    };
 
 }
+
+
+
 
 
 int main() {
@@ -299,9 +295,10 @@ int main() {
     // base_function::MyPlus ss;
     // int b = ss(23,22);
 
-    myfun::elections_fun a1(true);
+    // constitution::elections_fun a1(true);
     //myfun::elections_fun a2(false);
-    a1.do_elections();
+    // a1.do_elections();
+
     //a2.do_elections();
     // return 0;
 
