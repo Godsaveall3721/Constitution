@@ -1,0 +1,308 @@
+// 尽可能利用C++特性,不忘C语言特性
+// C++ 版本允许范围为98,03,11,14,17
+
+#include <iostream>
+#include <random>
+
+#define party_default 5
+// Far_Right 0
+// Right_Wing 1
+// Centrist 2
+// Left_Wing 3
+// Far_Left 4
+#define party_preference_default 1
+
+namespace base_function {
+
+    // 命名空间函数重载为原理的参数重载（局限，死板）
+    inline int vs1(const int x, const int y) { return x>y ? x : y; }
+    inline float vs1(const float x, const float y) { return x>y ? x : y; }
+    inline double vs1(const double x, const double y) { return x>y ? x : y; }
+    inline long double vs1(const long double x, const long double y) { return x>y ? x : y; }
+
+    // 模板函数重载(入/出参数重载灵活多变)
+    template<typename x, typename y>
+    constexpr auto vs2(x&& a, y&& b) -> decltype(a + b) {
+        return a>b ? a : b;
+    }
+
+    // my diy模板
+    template<typename x = void>
+    struct MyPlus;
+    template<>
+    struct MyPlus<void> {
+        template<typename a, typename b>
+        constexpr auto operator()(a&& x, b&& y) const
+        -> decltype(std::forward<a>(x) + std::forward<b>(y))
+        {
+            return std::forward<a>(x) + std::forward<b>(y);
+        }
+    };
+
+}
+
+
+
+namespace myfun {
+
+uint8_t party = party_default;
+uint8_t party_preference = party_preference_default;
+
+std::default_random_engine engine(static_cast<unsigned>(time(nullptr)));
+std::uniform_real_distribution<double> distribution(0.0, 1.0);
+
+class the_Faction {
+public:
+    explicit the_Faction() { // explicit 拒绝隐式调用 auto x(elections_fun temp); 阻止传入ture自己生成临时对象，必须传入自己生成的对象
+
+        this -> F = new double[party];
+
+        // 计算过程用catch保护
+        try {
+            // 初步概率分配
+            for (int i = 0; i < party; i++) {
+                F[i] = distribution(engine);
+            }
+
+            F[party_preference] += distribution(engine) * 10;
+
+            ReCalculation:
+            for (int i = 0; i < party; i++) {
+                temp += F[i];
+            }
+            for (int i = 0; i < party; i++) {
+                F[i] = (F[i]/temp) * 100.00;
+            }
+            temp = 0.0;
+
+
+            if (party % 2 == 1) {
+                if (F[(party + 1 ) / 2] + F[((party + 1 ) / 2) - 2] + F[((party + 1 ) / 2) - 1] <= 95.00) {
+                    F[(party + 1 ) / 2] += 0.01;
+                    F[((party + 1 ) / 2) - 2] += 0.01;
+                    F[((party + 1 ) / 2) - 1] += 0.01;
+                    goto ReCalculation;
+                }
+            }else if (party % 2 == 0) {
+                if (F[party / 2] + F[(party / 2) - 1] <= 95.00) {
+                    F[party / 2] += 0.01;
+                    F[(party / 2) - 1] += 0.01;
+                    goto ReCalculation;
+                }
+            }else {
+                throw std::logic_error("非法的政党数目");
+            }
+
+            // 优化偏好色谱
+            if (party_preference != 0 && party_preference != party - 1 && F[party_preference] + F[party_preference + 1] + F[party_preference - 1] < 75.0 ) {
+                F[party_preference] += 0.4;
+                F[party_preference + 1] += 0.2;
+                F[party_preference - 1] += 0.1;
+                F[party_preference + 2] -= 0.2;
+                goto ReCalculation;
+            }
+        } catch (...) {
+        }
+
+    };
+
+    double* get_prt_fun() const {
+        return this -> F;
+    }
+    virtual ~the_Faction() {
+        delete[] this -> F;
+        this -> F = nullptr;
+    }
+
+private:
+    double temp = 0.0;
+    double *F = nullptr; // 勿忘NULL的诞生，歧义之 int 0
+};
+
+// 模拟ROE宪法
+class elections_fun : public the_Faction {
+public:
+    explicit elections_fun(const bool the_bool0) { // explicit 拒绝隐式调用 auto x(elections_fun temp); 阻止传入ture自己生成临时对象，必须传入自己生成的对象
+        Directly_elected = the_bool0;
+        has_vice_Prime_Minister = Indirectly_elected = !the_bool0;
+        this -> F = get_prt_fun();
+    }
+    virtual bool do_elections() const {
+        int8_t way = NULL;
+        switch (Directly_elected) {
+            case true:
+                std::cout << "总统选举,直选模式" << std::endl;
+                if (distribution(engine) <= 0.15) {
+                    std::cout << "直选总统为无党籍" << std::endl; // 无党籍直接任命议会最大党成员出任总理,没有最大党就成立执政联盟
+                    for (uint8_t i = 0;i < party; i++) {
+                        std::cout << F[i] << "      ";
+                    }
+                    std::cout << std::endl;
+                    auto temp = 0.0;
+                    for (uint8_t i = 0;i < party - 1; i++) {
+                        temp > base_function::vs1(F[i], F[i + 1]) ?  temp : temp = base_function::vs1(F[i], F[i + 1]);
+                        if (i == party - 2) {
+                            int temp2 = NULL;
+                            for (uint8_t i = 0;i < party - 1; i++) {
+                                (F[i] == base_function::vs2(F[i],F[i + 1]) && F[temp2] < F[i]) ?  temp2 = i : temp2;
+                            }
+
+                            if (party % 2 == 1) {
+                                (temp2 > ((party + 1) / 2)) ? way = -1 : way = 1;
+                            }else if (party % 2 == 0) {
+                                (temp2 >= (party / 2)) ? way = -1 : way = 1;
+                            }else{
+                                throw std::logic_error("非法的政党数目");
+                            }
+
+                            std::cout << "晴雨表(右派到左派)：议会最大党" << temp2 << "号党派，总统潜在支持率为: " << temp << std::endl;
+                                if (temp < 50.00) {
+                                    std::cout << "直选总统所属党派在议会议席比例未超过50%" << std::endl; // 解决方法 1.政党执政联盟 2.依靠威望强行任命总理 3.认输放弃内政
+                                        if (distribution(engine) > 0.05 ) { // 0.88的可能在议会内部解决
+                                            if (distribution(engine) > 0.4) { // 0.6的可能政治光谱相近政党同意联盟
+                                            std::cout << "直选总统所属政党与光谱相近政党结为执政联盟" << std::endl;
+                                            std::cout << "联合政府由" << temp2 << "和" << temp2 + way << "号党派组成。支持率为: " << F[temp2] + F[temp2 + way] << std::endl;
+                                            }else {
+                                            std::cout << "直选总统所属政党与光谱相近政党选择与在野党结为执政联盟" << std::endl;
+                                            std::cout << "联合政府由" << temp2 + 1 << "和" << temp2 + (2*way) << "号党派组成。支持率为: " << F[temp2 + way] + F[temp2 + (2*way)] << std::endl;
+                                            }
+                                        }else { // 总统强行任命自己党派成员出任总理
+                                            // 如果被议会通过2次不信任动议就会下台,而且议会自己选出的总理，总统不得拒绝任命
+                                            std::cout << "直选总统依靠其政治手腕任命所属政党派成员出任总理,政府由" << temp2 << "号党派组成。支持率为: " << F[temp2] << std::endl;
+                                        }
+                                }else {
+                                    std::cout << "直选总统所属党派在议会议席比例未过50%,因此任命所属政党派成员出任总理,政府由" << temp2 << "号党派组成。支持率为: " << F[temp2] << std::endl;
+                                }
+                        }
+                    }
+
+
+                }else {
+                    std::cout << "直选总统为有党籍" << std::endl;
+                    for (uint8_t i = 0;i < party; i++) {
+                        std::cout << F[i] << "      ";
+                    }
+                    std::cout << std::endl;
+                    auto temp = 0.0;
+                    for (uint8_t i = 0;i < party - 1; i++) {
+                        temp > base_function::vs1(F[i], F[i + 1]) ?  temp : temp = base_function::vs1(F[i], F[i + 1]);
+                        if (i == party - 2) {
+                            int temp2 = NULL;
+                            for (uint8_t i = 0;i < party - 1; i++) {
+                                (F[i] == base_function::vs2(F[i],F[i + 1]) && F[temp2] < F[i]) ?  temp2 = i : temp2;
+                            }
+
+                            if (party % 2 == 1) {
+                                (temp2 > ((party + 1) / 2)) ? way = -1 : way = 1;
+                            }else if (party % 2 == 0) {
+                                (temp2 >= (party / 2)) ? way = -1 : way = 1;
+                            }else{
+                                throw std::logic_error("非法的政党数目");
+                            }
+
+                            std::cout << "晴雨表(右派到左派)：直选总统属于" << temp2 << "号党派，总统潜在支持率为: " << temp << std::endl;
+                                if (temp < 50.00) {
+                                    std::cout << "直选总统所属党派在议会议席比例未超过50%" << std::endl; // 解决方法 1.政党执政联盟 2.依靠威望强行任命总理 3.认输放弃内政
+                                        if (distribution(engine) > 0.05 ) { // 0.88的可能在议会内部解决
+                                            if (distribution(engine) > 0.4) { // 0.6的可能政治光谱相近政党同意联盟
+                                            std::cout << "直选总统所属政党与光谱相近政党结为执政联盟" << std::endl;
+                                            std::cout << "联合政府由" << temp2 << "和" << temp2 + way << "号党派组成。支持率为: " << F[temp2] + F[temp2 + way] << std::endl;
+                                            }else {
+                                            std::cout << "直选总统所属政党与光谱相近政党选择与在野党结为执政联盟" << std::endl;
+                                            std::cout << "联合政府由" << temp2 + 1 << "和" << temp2 + (2*way) << "号党派组成。支持率为: " << F[temp2 + way] + F[temp2 + (2*way)] << std::endl;
+                                            }
+                                        }else { // 总统强行任命自己党派成员出任总理
+                                            // 如果被议会通过2次不信任动议就会下台,而且议会自己选出的总理，总统不得拒绝任命
+                                            std::cout << "直选总统依靠其政治手腕任命所属政党派成员出任总理,政府由" << temp2 << "号党派组成。支持率为: " << F[temp2] << std::endl;
+                                        }
+                                }else {
+                                    std::cout << "直选总统所属党派在议会议席比例未过50%,因此任命所属政党派成员出任总理,政府由" << temp2 << "号党派组成。支持率为: " << F[temp2] << std::endl;
+                                }
+                        }
+                    }
+                }
+                std::cout << std::endl;
+                return true;
+            case false:
+                std::cout << "总统选举,间选模式,晴雨表(右到左): " << std::endl;
+                for (uint8_t i = 0;i < party; i++) {
+                    std::cout << F[i] << "      ";
+                }
+                std::cout << std::endl;
+                return false;
+            default:
+                break;
+        }
+        return NULL;
+    }
+
+    ~elections_fun() override {
+            // delete[] this -> F; 并非this申请，不应由this来释放
+            this -> F = nullptr;
+    };
+
+protected:
+bool Directly_elected; // 直接
+bool Indirectly_elected; // 间接
+bool has_vice_Prime_Minister; // 副总理
+
+private:
+    double *F = nullptr; // 勿忘NULL的诞生，歧义之 int 0
+};
+
+//
+// // 议会选举与总统选举至少间隔一年（杜绝议会解散，总统辞职）
+// class Parliamentary_mode : public elections_fun { // 上次议会选举中附加“下次民选President”项没有过半
+// public:
+//     Parliamentary_mode():elections_fun(false) {
+//         this -> F = get_prt_fun();
+//     };
+//     bool do_elections() const override final {
+//         std::cout << "总统选举,间选模式,晴雨表(右到左): " << std::endl;
+//         for (uint8_t i = 0;i < party; i++) {
+//             std::cout << F[i] << "      ";
+//         }
+//         std::cout << std::endl;
+//     }
+//     ~Parliamentary_mode() override final {
+//         this -> F = nullptr;
+//     }
+// private:
+//     double *F = nullptr; // 勿忘NULL的诞生，歧义之 int 0
+// };
+//
+//
+//     class Presidential_mode : public elections_fun { // 上次议会选举中附加“下次民选President”项过半
+//     public:
+//         Presidential_mode():elections_fun(true) {};
+//         ~Presidential_mode() override final = default;
+// };
+//
+//
+//     class dual_leadership_mode : public elections_fun { // 上次议会选举中附加“下次民选President”项过半,但是
+//     public:
+//         dual_leadership_mode():elections_fun(true) {};
+//         ~dual_leadership_mode() override final = default;
+// };
+
+
+}
+
+
+int main() {
+    // the_Faction faction;
+    // double* arr = faction.get_prt_fun();
+    // for (int i = 0; i < 5; i++) {
+    //     std::cout << "Element " << i << ": " << arr[i] << std::endl;
+    // }
+    // int a = base_function::MyPlus<void>()(20,40);
+    // base_function::MyPlus ss;
+    // int b = ss(23,22);
+
+    myfun::elections_fun a1(true);
+    //myfun::elections_fun a2(false);
+    a1.do_elections();
+    //a2.do_elections();
+    // return 0;
+
+}
