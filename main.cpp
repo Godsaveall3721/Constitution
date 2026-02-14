@@ -231,53 +231,57 @@ private:
 
     class Commune : public AdministrativeUnit {
     public:
-        // 市长兼公社委员会主席
-        std::string Maire_est_egalement_Preseidente_of_Municipal_Council;
-
-        // 任期 7 年
-        const int termYears = 7;
-
+        std::string Maire_est_egalement_Preseidente_of_Municipal_Council; // 市长兼公社委员会主席
+        const int termYears = 7; // 任期 7 年
         Commune(const std::string& name, const std::string& Subprefecture) : AdministrativeUnit(name, Subprefecture) {}
     };
 
-    class Arrondissement_of_Depaertment : AdministrativeUnit {
+    class Arrondissement_of_Depaertment : public AdministrativeUnit {
     public:
-        std::string Sous_Prefet;
-        std::vector<std::shared_ptr<Commune>> communes;
-        Arrondissement_of_Depaertment(const std::string& name, const std::string& Sous_prefecture) : AdministrativeUnit(name, Sous_prefecture) {}
+        std::string Sous_Prefet; // 副省长
+        std::vector<std::shared_ptr<Commune>> communes; // 下辖公社
+        Arrondissement_of_Depaertment(const std::string& name, const std::string& Sous_prefecture) : AdministrativeUnit(name, Sous_prefecture) {} // 副省会(Sous-prefecture)
 
     };
 
-    class Depaertment : AdministrativeUnit {
-        std::string prefet;
-        std::string Preseidente_of_Depaertmental_Conseil;
-        std::vector<std::shared_ptr<Arrondissement_of_Depaertment>> Arrondissement_of_Depaertments;
-        Depaertment(const std::string& name, const std::string& Prefectures) : AdministrativeUnit(name, Prefectures) {}
+    class Depaertment : public AdministrativeUnit {
+        std::string Prefet_of_Departement; // 省长
+        std::string Preseidente_of_Depaertmental_Conseil; // 省议会主席
+        std::vector<std::shared_ptr<Arrondissement_of_Depaertment>> Arrondissement_of_Depaertments; // 下辖省区
+        Depaertment(const std::string& name, const std::string& Prefectures) : AdministrativeUnit(name, Prefectures) {} // 省会(Prefectures)
     };
 
-    class Metropolitan_Citta : AdministrativeUnit {
-        std::string Preseidente_of_Conseil_Delle_Metropolitan_Citta;
-        std::vector<std::shared_ptr<Commune>> communes;
-        Metropolitan_Citta(const std::string& name, const std::string& Central_City) : AdministrativeUnit(name, Central_City) {}
+    class Metropolitan_Citta : public AdministrativeUnit {
+        std::string Metropolitan_Sindaco; // 广域市市长
+        std::string Preseidente_of_Conseil_Delle_Metropolitan_Citta; // 广域市议会主席
+        std::vector<std::shared_ptr<Commune>> communes; // 下辖公社
+        Metropolitan_Citta(const std::string& name, const std::string& Central_City) : AdministrativeUnit(name, Central_City) {} // 中心城市(Central City)
     };
 
     class Region : public AdministrativeUnit {
     public:
         std::string Prefet_of_Region; // 大区区长
         std::string Preseidente_of_Regional_Conseil; // 大区议会主席
-        std::vector<std::shared_ptr<Depaertment>> depaertments;
-        std::vector<std::shared_ptr<Metropolitan_Citta>> metropolitan_cittas;
+        std::vector<std::shared_ptr<Depaertment>> depaertments; // 下辖省
+        std::vector<std::shared_ptr<Metropolitan_Citta>> metropolitan_cittas;  // 下辖广域市
         Region(const std::string& name, const std::string& Prefectures) : AdministrativeUnit(name, Prefectures) {}
     };
 
-    class Republic : AdministrativeUnit {
+    class Republic : public AdministrativeUnit {
     public:
-        std::string President;
-        std::string Prime_Minister;
-        std::vector<std::shared_ptr<Region>> regions;
+        std::string President; // 总统
+        std::string Prime_Minister; //  总理
+        std::vector<std::shared_ptr<Region>> regions; // 下辖大区
         Republic(const std::string& name, const std::string capital) : AdministrativeUnit(name, capital) {}
 
     };
+
+    // 第二步：完善各个抽象层的议会,以及选举制度
+    // 第一级                        | 第二级           | 第三级                            |  第四级（省的辅助行政区）| 第五级
+    // 国家议会（参议院/众议院，两院制）| 大区议会（一院制） | 省议会（一院制） 广域市议会（一院制） |  无                   | 公社的委员会(一院制)
+
+
+
 
 }
 
