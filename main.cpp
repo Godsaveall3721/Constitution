@@ -280,9 +280,57 @@ private:
     // 第一级                        | 第二级           | 第三级                            |  第四级（省的辅助行政区）| 第五级
     // 国家议会（参议院/众议院，两院制）| 大区议会（一院制） | 省议会（一院制） 广域市议会（一院制） |  无                   | 公社的委员会(一院制)
 
+    typedef enum class ElectionSystem {
+        TwoRoundMajority,    // 二轮绝对多数制
+        FreeList,            // 自由式名单制
+        OpenList,            // 开放式名单制
+        ClosedList,          // 封闭式名单制
+        SingleTransferable,  // 单记让渡制
+        RelativeMajority     // 相对多数制
+    } ElectionSystem;
 
+    class AbstractCouncil {
+    public:
+        std::string councilName;
+        int termYears; // 任期
+        ElectionSystem electionMethod;
 
+        AbstractCouncil(std::string name, int term, ElectionSystem method) : councilName(name), termYears(term), electionMethod(method) {}
+        virtual ~AbstractCouncil() = default;
+        virtual void runElection() = 0;
 
+    };
+
+    class ChamberOfDeputies : public AbstractCouncil {
+    public:
+        ChamberOfDeputies() : AbstractCouncil("共和国众议院", 4, ElectionSystem::ClosedList) {} // 配合联立制
+        void runElection() override { /* 模拟 4年一届的联立制选举 */ }
+    };
+
+    class Senate : public AbstractCouncil {
+    public:
+        Senate() : AbstractCouncil("共和国参议院", 6, ElectionSystem::FreeList) {} // 配合并立制
+        void runElection() override { /* 模拟 1/3 改选逻辑 */}
+    };
+
+    class RegionalCouncil : public AbstractCouncil {
+    public:
+        RegionalCouncil() : AbstractCouncil("大区议会", 4, ElectionSystem::FreeList) {}
+        void runElection() override { /* 模拟 4年一届自由名单制*/ }
+    };
+
+    class DepaertmentalCouncil : public AbstractCouncil {
+    public:
+        DepaertmentalCouncil(std::string levelName) : AbstractCouncil(levelName + "议会", 5, ElectionSystem::OpenList) {}
+        void runElection() override { /* 模拟 5年一届的开放式名单制 */ }
+    };
+
+    class MunicipalCouncil : public  AbstractCouncil {
+    public:
+        MunicipalCouncil() : AbstractCouncil("公社委员会", 7, ElectionSystem::SingleTransferable) {}
+        void runElection() override { /* 模拟 7年一届单记让渡制 */}
+
+    };
 }
 
 
