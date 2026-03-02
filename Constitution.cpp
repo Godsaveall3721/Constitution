@@ -147,12 +147,15 @@ namespace constitution {
     public:
         ChamberOfDeputies() : AbstractCouncil("共和国众议院", 4, ElectionSystem::ClosedList) {} // 配合联立制
         std::shared_ptr<ExecutiveBody> runElection() override {
-            /* 模拟 4年一届的联立制选举 */
+            /* 模拟 4年一届的选举 */
+            /* 全国性封闭式名单制 + 小选区性二轮绝对多数制  联立制--席位不固定，党票瓜分比例，小选区胜者必进议会，没有达到比例党内候补进去 */
+
             return nullptr;
         }
 
         std::shared_ptr<ExecutiveBody> formExecutive() override {
-            /* 众议院必然组阁 */
+            /* 组阁与总理信任投票（直选总统无需建设性投票，间选总统需要建设性投票）*/
+            /* 选举议长 */
         }
 
     };
@@ -162,10 +165,15 @@ namespace constitution {
         Senate() : AbstractCouncil("共和国参议院", 6, ElectionSystem::FreeList) {} // 配合并立制
         std::shared_ptr<ExecutiveBody> runElection() override {
             /* 模拟 1/3 改选逻辑 */
+            /* 历届非弹劾卸任总统为终身当然议员 (不参与改选) */
+            /* 由公民通过二轮绝对多数制产生（每个大区7名） */
+            /* 全国性自由式名单制 + 小选区性二轮绝对多数制 并立制--席位固定，60%是小选区专属，40%是党比例分配专属 */
+
             return nullptr;
         }
         std::shared_ptr<ExecutiveBody> formExecutive() override {
             /* 参议院在内阁模式下民选议员部分自己决定是否付出可能被解散改选的代价来参与组阁 */
+            /* 选举议长 */
         }
     };
 
@@ -178,6 +186,7 @@ namespace constitution {
         }
         std::shared_ptr<ExecutiveBody> formExecutive() override {
             /* 大区议会选举大区议会主席，大区委员会 */
+            /* 中央钦定的大区区长 (与此议会无关) */
         }
     };
 
@@ -190,6 +199,7 @@ namespace constitution {
         }
         std::shared_ptr<ExecutiveBody> formExecutive() override {
             /* 省议会选举省议会主席，省委员会 */
+            /* 中央钦定的省长 (与此议会无关) */
         }
     };
 
@@ -202,6 +212,7 @@ namespace constitution {
         }
         std::shared_ptr<ExecutiveBody> formExecutive() override {
             /* 广域市议会选举广域市议会主席，都会委员会 */
+            /* 市民直选的广域市市长 (与此议会无关) */
         }
     };
 
