@@ -5,8 +5,6 @@
 #ifndef CONSTITUTION_MAIN_HPP
 #define CONSTITUTION_MAIN_HPP
 
-extern "C" long long add_64(long long a, long long b);
-
 #define party_default 5
 // Far_Right 0
 // Right_Wing 1

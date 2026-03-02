@@ -1,7 +1,8 @@
 section .text
-global add_64
+global add_asm
 
-add_64:
+; 64 位汇编版本
+add_asm:
     ; Linux x86_64 调用约定:
     ; rdi = 第一个参数 (a)
     ; rsi = 第二个参数 (b)
@@ -9,7 +10,8 @@ add_64:
     add rax, rsi    ; rax = rax + rsi
     ret             ; 返回值永远放在 rax
 
-;int add_32(int a, int b) {
+; 32 位汇编版本
+;int add_asm(int a, int b) {
 ;    int result;
 ;    // GCC 风格的内联汇编
 ;    asm (
@@ -22,9 +24,9 @@ add_64:
 ;}
 ;
 ;.section .text
-;.global add_32
+;.global add_asm
 ;
-;add_32:
+;add_asm:
 ;    movl %edi, %eax
 ;    addl %esi, %eax
 ;    ret

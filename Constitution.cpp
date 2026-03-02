@@ -5,13 +5,16 @@
 #include <random>
 #include <memory>  // 现代C++智能指针
 #include <cstdlib> // C模式的malloc/free
-#include "main.hpp"
+#include "Constitution.hpp"
 
 extern "C" {
 #include "election.h"
 }
 
+extern "C" long long add_asm (long long a, long long b);
+
 namespace constitution {
+
     class Member;
     class ExecutiveBody;
     class Constituency;
@@ -221,6 +224,5 @@ namespace constitution {
 
 
 int main() {
-
-
+    std::cout << "X";
 }

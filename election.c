@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void simulate_elecction(const char* council_name, int num_menbers) {
+void simulate_election(const char* council_name, int num_menbers) {
     srand(time(NULL)); // 设置随机种子
     printf("%s 选举开始，选出 %d 人\n", council_name, num_menbers);
     int* member = (int*) malloc(num_menbers * sizeof(int)); // C模式申请内存
