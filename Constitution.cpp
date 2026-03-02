@@ -34,11 +34,11 @@ namespace constitution {
         std::string capital;
         uint64_t population;
         std::vector<std::shared_ptr<Constituency>> constituencies; // 对应的选区
-        virtual std::shared_ptr<ExecutiveBody> formExecutive() = 0; // 从议员中产生行政班底的虚函数
-        AdministrativeUnit(const std::string& the_name, const std::string& the_capital) : name(the_name),capital(the_capital) {
+        AdministrativeUnit(const std::string& the_name, const std::string& the_capital, uint64_t pop = 0) : name(the_name),capital(the_capital), population(pop) {
             name = the_name;
             capital = the_capital;
         }
+        virtual std::shared_ptr<ExecutiveBody> formExecutive() = 0; // 从议员中产生行政班底的虚函数
         virtual ~AdministrativeUnit() = default;
     };
 
@@ -49,7 +49,7 @@ namespace constitution {
         std::shared_ptr<MunicipalCouncil> council; // 公社委员会
         std::shared_ptr<ExecutiveBody> mairie; // 公社行政班底：市政厅
         const int termYears = 7; // 任期 7 年
-        Commune(const std::string& name, const std::string& Subprefecture) : AdministrativeUnit(name, Subprefecture) {
+        Commune(const std::string& name, const std::string& Subprefecture, const uint64_t pop) : AdministrativeUnit(name, Subprefecture, pop) {
             council = std::make_shared<MunicipalCouncil>();
         }
 
@@ -64,7 +64,7 @@ namespace constitution {
     public:
         std::string Sous_Prefet; // 副省长(内政部任命)
         std::vector<std::shared_ptr<Commune>> communes; // 下辖公社
-        Arrondissement_of_Depaertment(const std::string& name, const std::string& Sous_prefecture) : AdministrativeUnit(name, Sous_prefecture) {} // 副省会(Sous-prefecture)
+        Arrondissement_of_Depaertment(const std::string& name, const std::string& Sous_prefecture, const uint64_t pop) : AdministrativeUnit(name, Sous_prefecture, pop) {} // 副省会(Sous-prefecture)
 
     };
 
@@ -73,7 +73,7 @@ namespace constitution {
         std::string Preseidente_of_Depaertmental_Conseil; // 省议会主席
         std::vector<std::shared_ptr<Arrondissement_of_Depaertment>> Arrondissement_of_Depaertments; // 下辖省区
         std::shared_ptr<DepaertmentalConseil> council; // 省议会
-        Depaertment(const std::string& name, const std::string& Prefectures) : AdministrativeUnit(name, Prefectures) {
+        Depaertment(const std::string& name, const std::string& Prefectures, const uint64_t pop) : AdministrativeUnit(name, Prefectures, pop) {
             council = std::make_shared<DepaertmentalConseil>();
         } // 省会(Prefectures)
     };
@@ -83,7 +83,7 @@ namespace constitution {
         std::string Preseidente_of_Conseil_Delle_Metropolitan_Citta; // 广域市议会主席
         std::vector<std::shared_ptr<Commune>> communes; // 下辖公社
         std::shared_ptr<ConseilDelleMetropolitanCitta> council; // 广域市议会
-        Metropolitan_Citta(const std::string& name, const std::string& Central_City) : AdministrativeUnit(name, Central_City) {
+        Metropolitan_Citta(const std::string& name, const std::string& Central_City, const uint64_t pop) : AdministrativeUnit(name, Central_City, pop) {
             council = std::make_shared<ConseilDelleMetropolitanCitta>();
         } // 中心城市(Central City)
     };
@@ -94,7 +94,7 @@ namespace constitution {
         std::string Preseidente_of_Regional_Conseil; // 大区议会主席
         std::vector<std::shared_ptr<Depaertment>> depaertments; // 下辖省
         std::vector<std::shared_ptr<Metropolitan_Citta>> metropolitan_cittas;  // 下辖广域市
-        Region(const std::string& name, const std::string& Prefectures) : AdministrativeUnit(name, Prefectures) {}
+        Region(const std::string& name, const std::string& Prefectures, const uint64_t pop) : AdministrativeUnit(name, Prefectures, pop) {}
     };
 
     class Republic : public AdministrativeUnit {
@@ -104,9 +104,14 @@ namespace constitution {
         std::vector<std::shared_ptr<Region>> regions; // 下辖大区
         std::shared_ptr<Senate> senate;
         std::shared_ptr<ChamberOfDeputies> chamber;
-        Republic() : AdministrativeUnit("ROE", "Vienna") {
+        Republic() : AdministrativeUnit("ROE", "Vienna", 500000000ULL) {
             senate = std::make_shared<Senate>();
             chamber = std::make_shared<ChamberOfDeputies>();
+        }
+
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            std::cout << "Republic forming executive (placeholder).\n";
+            return nullptr;
         }
     };
 
@@ -128,12 +133,12 @@ namespace constitution {
         std::string councilName;
         int termYears; // 任期
         ElectionSystem electionMethod; // 选举模式
-        std::vector<std::shared_ptr<Member>> members; // 议员席位
+        std::vector<std::shared_ptr<Member>> members; // 议员席位 现代vector + shared_ptr
         std::shared_ptr<Member> councilPresident;    // 议会主席
         AbstractCouncil(const std::string &name, const int term, const ElectionSystem method) : councilName(name), termYears(term), electionMethod(method) {}
 
-        virtual void runElection() = 0;
-        //virtual void formExecutiveBody()  = 0;
+        virtual std::shared_ptr<ExecutiveBody> runElection() = 0;
+        virtual std::shared_ptr<ExecutiveBody> formExecutive() = 0;
         virtual ~AbstractCouncil() = default;
 
     };
@@ -141,38 +146,75 @@ namespace constitution {
     class ChamberOfDeputies : public AbstractCouncil {
     public:
         ChamberOfDeputies() : AbstractCouncil("共和国众议院", 4, ElectionSystem::ClosedList) {} // 配合联立制
-        void runElection() override { /* 模拟 4年一届的联立制选举 */ }
+        std::shared_ptr<ExecutiveBody> runElection() override {
+            /* 模拟 4年一届的联立制选举 */
+            return nullptr;
+        }
+
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            /* 众议院必然组阁 */
+        }
+
     };
 
     class Senate : public AbstractCouncil {
     public:
         Senate() : AbstractCouncil("共和国参议院", 6, ElectionSystem::FreeList) {} // 配合并立制
-        void runElection() override { /* 模拟 1/3 改选逻辑 */}
+        std::shared_ptr<ExecutiveBody> runElection() override {
+            /* 模拟 1/3 改选逻辑 */
+            return nullptr;
+        }
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            /* 参议院在内阁模式下民选议员部分自己决定是否付出可能被解散改选的代价来参与组阁 */
+        }
     };
 
     class RegionalCouncil : public AbstractCouncil {
     public:
         RegionalCouncil() : AbstractCouncil("大区议会", 4, ElectionSystem::FreeList) {}
-        void runElection() override { /* 模拟 4年一届自由名单制*/ }
+        std::shared_ptr<ExecutiveBody> runElection() override {
+            /* 模拟 4年一届自由名单制*/
+            return nullptr;
+        }
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            /* 大区议会选举大区议会主席，大区委员会 */
+        }
     };
 
     class DepaertmentalConseil : public AbstractCouncil {
     public:
         DepaertmentalConseil() : AbstractCouncil("省议会", 5, ElectionSystem::OpenList) {}
-        void runElection() override { /* 模拟 5年一届的开放式名单制 */ }
+        std::shared_ptr<ExecutiveBody> runElection() override {
+            /* 模拟 5年一届的开放式名单制 */
+            return nullptr;
+        }
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            /* 省议会选举省议会主席，省委员会 */
+        }
     };
 
     class ConseilDelleMetropolitanCitta : public AbstractCouncil {
     public:
         ConseilDelleMetropolitanCitta() : AbstractCouncil("广域市议会", 5, ElectionSystem::OpenList) {}
-        void runElection() override { /* 模拟 5年一届的开放式名单制 */ }
+        std::shared_ptr<ExecutiveBody> runElection() override {
+            /* 模拟 5年一届的开放式名单制 */
+            return nullptr;
+        }
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            /* 广域市议会选举广域市议会主席，都会委员会 */
+        }
     };
 
     class MunicipalCouncil : public  AbstractCouncil {
     public:
         MunicipalCouncil() : AbstractCouncil("公社委员会", 7, ElectionSystem::SingleTransferable) {}
-        void runElection() override { /* 模拟 7年一届单记让渡制 */}
-
+        std::shared_ptr<ExecutiveBody> runElection() override {
+            /* 模拟 7年一届单记让渡制 */
+            return nullptr;
+        }
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            /* 公社委员会选举市长兼公社委员会主席，市政厅 */
+        }
     };
 
     // 第三步：完善选区
@@ -212,9 +254,14 @@ namespace constitution {
     class Member {
     public:
         std::string name;
-        std::shared_ptr<Constituency> fromConstituency;
+        // 回顾老C++ 不用std::shared_ptr<Constituency>，没有RAII机制兜底。new/delete
+        Constituency* fromConstituency;
         bool isCabinetMember = false; // 是否已入阁
-        Member(const std::string &n, const std::shared_ptr<Constituency>& c) : name(n), fromConstituency(c) {}
+        Member(const std::string &n, Constituency* c) : name(n), fromConstituency(c) {}
+        ~Member() {
+            // 故意不delete fromConstituency（共享，不拥有所有权）
+            // 如果拥有所有权，可在这里delete
+        }
     };
 
 }
@@ -224,5 +271,27 @@ namespace constitution {
 
 
 int main() {
-    std::cout << "X";
+    std::cout << "ROE Constitution Simulation - Stage 1\n\n";
+
+    constitution::Republic republic;
+
+    // 测试创建几个选区
+    for (int i = 1; i <= 5; ++i) {
+        republic.constituencies.push_back(
+            std::make_shared<constitution::Constituency>("Constituency " + std::to_string(i), 5000000ULL)
+        );
+    }
+
+    std::cout << "Republic: " << republic.name << ", Capital: " << republic.capital
+              << ", Population: " << republic.population << "\n";
+
+    // 模拟议会初始化
+    republic.chamber->runElection();
+    republic.senate->runElection();
+
+    // 模拟形成执行机构
+    republic.formExecutive();
+
+    std::cout << "\nStage 1 complete. No crash.\n";
+    return 0;
 }
