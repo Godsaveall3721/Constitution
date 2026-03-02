@@ -3,10 +3,16 @@
 
 #include <iostream>
 #include <random>
-#include <memory>
+#include <memory>  // 现代C++智能指针
+#include <cstdlib> // C模式的malloc/free
 #include "main.hpp"
 
-namespace constitution  {
+extern "C" {
+#include "election.h"
+}
+
+namespace constitution {
+    class Member;
     class ExecutiveBody;
     class Constituency;
     class ChamberOfDeputies;
@@ -38,9 +44,16 @@ namespace constitution  {
         std::string maire; // 市长由委员会选举产生
         std::string Maire_est_egalement_Preseidente_of_Municipal_Council; // 市长兼公社委员会主席
         std::shared_ptr<MunicipalCouncil> council; // 公社委员会
+        std::shared_ptr<ExecutiveBody> mairie; // 公社行政班底：市政厅
         const int termYears = 7; // 任期 7 年
         Commune(const std::string& name, const std::string& Subprefecture) : AdministrativeUnit(name, Subprefecture) {
             council = std::make_shared<MunicipalCouncil>();
+        }
+
+        // 实现虚函数：由委员会产生市政厅
+        std::shared_ptr<ExecutiveBody> formExecutive() override {
+            // mairie = council->formExecutiveBody(); // 权限委托给议会
+            return mairie;
         }
     };
 
@@ -90,7 +103,8 @@ namespace constitution  {
         std::shared_ptr<ChamberOfDeputies> chamber;
         Republic() : AdministrativeUnit("ROE", "Vienna") {
             senate = std::make_shared<Senate>();
-            chamber = std::make_shared<ChamberOfDeputies>();}
+            chamber = std::make_shared<ChamberOfDeputies>();
+        }
     };
 
     // 第二步：完善各个抽象层的议会,以及选举制度
@@ -110,11 +124,14 @@ namespace constitution  {
     public:
         std::string councilName;
         int termYears; // 任期
-        ElectionSystem electionMethod;
+        ElectionSystem electionMethod; // 选举模式
+        std::vector<std::shared_ptr<Member>> members; // 议员席位
+        std::shared_ptr<Member> councilPresident;    // 议会主席
+        AbstractCouncil(const std::string &name, const int term, const ElectionSystem method) : councilName(name), termYears(term), electionMethod(method) {}
 
-        AbstractCouncil(std::string name, int term, ElectionSystem method) : councilName(name), termYears(term), electionMethod(method) {}
-        virtual ~AbstractCouncil() = default;
         virtual void runElection() = 0;
+        //virtual void formExecutiveBody()  = 0;
+        virtual ~AbstractCouncil() = default;
 
     };
 
@@ -160,21 +177,42 @@ namespace constitution  {
     public:
         std::string name;
         uint64_t voterCount;
-        // 大区选举由行省(Province)选区单位组成，省由县(Canton)组成
+        // 大区选举由行省(Province)选区单位组成，省由县(Canton)组成，众议院民选部分，参议院民选部分，直选总统由公社(Commune)组成
         Constituency(const std::string& n, const uint64_t& v) : name(n), voterCount(v) {}
     };
 
     // 第四步：完善行政班底/内阁/委员会
     class ExecutiveBody {
     public:
-        std::string leader; // 总理/主席/市长
-        std::vector<std::string> members; // 阁员/委员名单
+        std::shared_ptr<Member> leader; // 总理/主席/市长
+        std::vector<std::shared_ptr<Member>> cabinetMembers; // 阁员/委员名单
 
-        virtual void setLeader(std::string name) { leader = name; }
-        virtual void addMember(std::string name) { members.push_back(name); }
+        // virtual void setLeader(std::string name) { leader = name; }
+        // virtual void addMember(std::string name) { cabinetMembers.push_back(name); }
+
+        // 对应宪法：副署逻辑
+        bool countersign(const std::string& order) {
+            std::cout << "班底成员正在对命令 [" << order << "] 进行副署..." << std::endl;
+            return true;
+        }
+
         virtual ~ExecutiveBody() = default;
     };
 
+    // 特殊化：内阁
+    class Cabinet : public ExecutiveBody {
+    public:
+        // 处理建设性不信任案逻辑
+        bool handleNoConfidenceVote();
+    };
+
+    class Member {
+    public:
+        std::string name;
+        std::shared_ptr<Constituency> fromConstituency;
+        bool isCabinetMember = false; // 是否已入阁
+        Member(const std::string &n, const std::shared_ptr<Constituency>& c) : name(n), fromConstituency(c) {}
+    };
 
 }
 
@@ -183,20 +221,6 @@ namespace constitution  {
 
 
 int main() {
-    // the_Faction faction;
-    // double* arr = faction.get_prt_fun();
-    // for (int i = 0; i < 5; i++) {
-    //     std::cout << "Element " << i << ": " << arr[i] << std::endl;
-    // }
-    // int a = base_function::MyPlus<void>()(20,40);
-    // base_function::MyPlus ss;
-    // int b = ss(23,22);
 
-    // constitution::elections_fun a1(true);
-    //myfun::elections_fun a2(false);
-    // a1.do_elections();
-
-    //a2.do_elections();
-    // return 0;
 
 }
