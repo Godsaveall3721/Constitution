@@ -28,7 +28,7 @@ namespace constitution {
     // 共和国----大区-------省--------省区---公社
     //               \
     //                \----广域市-----------公社
-    class AdministrativeUnit {
+    class AdministrativeUnit { // 行政区划： base
     public:
         std::string name;
         std::string capital;
@@ -42,7 +42,7 @@ namespace constitution {
         virtual ~AdministrativeUnit() = default;
     };
 
-    class Commune : public AdministrativeUnit {
+    class Commune : public AdministrativeUnit { // 行政区划： 公社
     public:
         std::string maire; // 市长由委员会选举产生
         std::string Maire_est_egalement_Preseidente_of_Municipal_Council; // 市长兼公社委员会主席
@@ -60,7 +60,7 @@ namespace constitution {
         }
     };
 
-    class Arrondissement_of_Depaertment : public AdministrativeUnit {
+    class Arrondissement_of_Depaertment : public AdministrativeUnit { // 行政区划： 省区 (仅仅是省的下级，不是广域市的下级)
     public:
         std::string Sous_Prefet; // 副省长(内政部任命)
         std::vector<std::shared_ptr<Commune>> communes; // 下辖公社
@@ -68,7 +68,7 @@ namespace constitution {
 
     };
 
-    class Depaertment : public AdministrativeUnit {
+    class Depaertment : public AdministrativeUnit { // 行政区划： 省
         std::string Prefet_of_Departement; // 省长(内政部任命)
         std::string Preseidente_of_Depaertmental_Conseil; // 省议会主席
         std::vector<std::shared_ptr<Arrondissement_of_Depaertment>> Arrondissement_of_Depaertments; // 下辖省区
@@ -78,7 +78,7 @@ namespace constitution {
         } // 省会(Prefectures)
     };
 
-    class Metropolitan_Citta : public AdministrativeUnit {
+    class Metropolitan_Citta : public AdministrativeUnit { // 行政区划： 广域市
         std::string Metropolitan_Sindaco; // 广域市市长（相对多数制产生）
         std::string Preseidente_of_Conseil_Delle_Metropolitan_Citta; // 广域市议会主席
         std::vector<std::shared_ptr<Commune>> communes; // 下辖公社
@@ -88,7 +88,7 @@ namespace constitution {
         } // 中心城市(Central City)
     };
 
-    class Region : public AdministrativeUnit {
+    class Region : public AdministrativeUnit { // 行政区划： 大区
     public:
         std::string Prefet_of_Region; // 大区区长(内政部任命)
         std::string Preseidente_of_Regional_Conseil; // 大区议会主席
@@ -97,7 +97,7 @@ namespace constitution {
         Region(const std::string& name, const std::string& Prefectures, const uint64_t pop) : AdministrativeUnit(name, Prefectures, pop) {}
     };
 
-    class Republic : public AdministrativeUnit {
+    class Republic : public AdministrativeUnit { // 行政区划： 共和国
     public:
         std::string President; // 总统
         std::string Prime_Minister; //  总理
@@ -128,7 +128,7 @@ namespace constitution {
         RelativeMajority     // 相对多数制
     } ElectionSystem;
 
-    class AbstractCouncil {
+    class AbstractCouncil { // 议会：base
     public:
         std::string councilName;
         int termYears; // 任期
@@ -143,7 +143,7 @@ namespace constitution {
 
     };
 
-    class ChamberOfDeputies : public AbstractCouncil {
+    class ChamberOfDeputies : public AbstractCouncil { // 议会：共和国众议院
     public:
         ChamberOfDeputies() : AbstractCouncil("共和国众议院", 4, ElectionSystem::ClosedList) {} // 配合联立制
         std::shared_ptr<ExecutiveBody> runElection() override {
@@ -160,7 +160,7 @@ namespace constitution {
 
     };
 
-    class Senate : public AbstractCouncil {
+    class Senate : public AbstractCouncil { // 议会：共和国参议院
     public:
         Senate() : AbstractCouncil("共和国参议院", 6, ElectionSystem::FreeList) {} // 配合并立制
         std::shared_ptr<ExecutiveBody> runElection() override {
@@ -177,7 +177,7 @@ namespace constitution {
         }
     };
 
-    class RegionalCouncil : public AbstractCouncil {
+    class RegionalCouncil : public AbstractCouncil { // 议会：大区议会
     public:
         RegionalCouncil() : AbstractCouncil("大区议会", 4, ElectionSystem::FreeList) {}
         std::shared_ptr<ExecutiveBody> runElection() override {
@@ -190,7 +190,7 @@ namespace constitution {
         }
     };
 
-    class DepaertmentalConseil : public AbstractCouncil {
+    class DepaertmentalConseil : public AbstractCouncil { // 议会：省议会
     public:
         DepaertmentalConseil() : AbstractCouncil("省议会", 5, ElectionSystem::OpenList) {}
         std::shared_ptr<ExecutiveBody> runElection() override {
@@ -203,7 +203,7 @@ namespace constitution {
         }
     };
 
-    class ConseilDelleMetropolitanCitta : public AbstractCouncil {
+    class ConseilDelleMetropolitanCitta : public AbstractCouncil { // 议会：广域市议会
     public:
         ConseilDelleMetropolitanCitta() : AbstractCouncil("广域市议会", 5, ElectionSystem::OpenList) {}
         std::shared_ptr<ExecutiveBody> runElection() override {
@@ -216,7 +216,7 @@ namespace constitution {
         }
     };
 
-    class MunicipalCouncil : public  AbstractCouncil {
+    class MunicipalCouncil : public  AbstractCouncil { // 议会：公社委员会
     public:
         MunicipalCouncil() : AbstractCouncil("公社委员会", 7, ElectionSystem::SingleTransferable) {}
         std::shared_ptr<ExecutiveBody> runElection() override {
@@ -255,7 +255,7 @@ namespace constitution {
         virtual ~ExecutiveBody() = default;
     };
 
-    // 特殊化：内阁
+    // 特殊化：共和国内阁
     class Cabinet : public ExecutiveBody {
     public:
         // 处理建设性不信任案逻辑
