@@ -237,6 +237,7 @@ namespace constitution {
         Constituency(const std::string& n, const uint64_t& v) : name(n), voterCount(v) {}
     };
 
+
     // 第四步：完善行政班底/内阁/委员会
     class ExecutiveBody {
     public:
