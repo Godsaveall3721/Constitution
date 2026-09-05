@@ -222,47 +222,59 @@ IV  共和国司法
 
 V 地方
 
-    i. 大区(Region)为一级行政区，大区首府(Prefectures)是大区政府所在地。
+    i. 共和国为单一制国家。国家主权与原始政治权力统一且不可分割地归属于共和国中央。大区、省、广域市及公社等地方实体所行使之自治权限，均系共和国通过宪法与法律所下授之“行政与管理权利/职权”（Right / Authority），而非固有之“政治权力”（Power）。共和国得随时依据宪法与法律，对下授地方之权限进行调整、限制或收回。
 
-    ii. 大区议会(Regional Conseil)的选举施行自由式名单制，任期为每届4年，由各行省(Province)选区单位内的公民选出。
+    ii. 大区(Region)为一级行政区，大区首府(Prefectures)是大区政府所在地。
 
-    iii. 由大区议会选举产生的大区议会主席(Preseidente of Regional Conseil)需负责管理大区议会活动。
+    iii. 大区议会(Regional Conseil)的选举施行自由式名单制，任期为每届4年，由各行省(Province)选区单位内的公民选出。
 
-    iv. 由大区议会选举产生的大区委员会(Regional Commission)需负责大区行政。
+    iv. 由大区议会选举产生的大区议会主席(Preseidente of Regional Conseil)需负责管理大区议会活动。
 
-    v. 共和国政府通过内政部会议决定任免大区区长(Prefet of Region)管理各大区。
+    v. 由大区议会选举产生的大区委员会(Regional Commission)需负责大区行政。
 
-    vi. 隶属于大区(Region)的省(Depaertments)为二级行政区，省会(Prefectures)是省政府所在地。
+    vi. 共和国政府通过内政部会议决定任免大区区长(Prefet of Region)管理各大区。
 
-    vii. 省议会(Depaertmental Conseil)的选举施行开放式名单制，任期为每届5年，由各县(Canton)选区单位内的公民选出。
+    vii. 隶属于大区(Region)的省(Depaertments)为二级行政区，省会(Prefectures)是省政府所在地。
 
-    viii. 由省议会选举产生的省议会主席(Preseidente of Depaertmental Conseil)需负责管理省议会活动。
+    viii. 省议会(Depaertmental Conseil)的选举施行开放式名单制，任期为每届5年，由各县(Canton)选区单位内的公民选出。
 
-    ix. 由省议会选举产生的省委员会(Permanental Commission)需负责省行政。
+    ix. 由省议会选举产生的省议会主席(Preseidente of Depaertmental Conseil)需负责管理省议会活动。
 
-    x. 共和国政府通过内政部会议决定任免省长(Prefet of Departement)管理各省。
+    x. 由省议会选举产生的省委员会(Permanental Commission)需负责省行政。
 
-    xi. 隶属于大区(Region)的广域市(Metropolitan Citta)为二级行政区，中心城市(Central City)是广域市政府所在地。
+    xi. 共和国政府通过内政部会议决定任免省长(Prefet of Departement)管理各省。
 
-    xii. 广域市议会(Conseil Delle Metropolitan Citta)的选举施行开放式名单制，任期为每届5年，由各县(Canton)选区单位内的公民选出。
+    xii. 隶属于大区(Region)的广域市(Metropolitan Citta)为二级行政区，中心城市(Central City)是广域市政府所在地。
 
-    xiii. 由广域市议会选举产生的广域市议会主席(Preseidente of Conseil Delle Metropolitan Citta)需负责管理广域市议会活动。
+    xiii. 广域市议会(Conseil Delle Metropolitan Citta)的选举施行开放式名单制，任期为每届5年，由各县(Canton)选区单位内的公民选出。
 
-    xiv. 由广域市议会选举产生的都会委员会(Metropolitan Consiglio)需负责广域市行政。
+    xiv. 由广域市议会选举产生的广域市议会主席(Preseidente of Conseil Delle Metropolitan Citta)需负责管理广域市议会活动。
 
-    xv. 广域市市长(Metropolitan Sindaco)的选举施行相对多数制，任期为每届5年，由各县(Canton)选区单位内的公民选出。
+    xv. 由广域市议会选举产生的都会委员会(Metropolitan Consiglio)需负责广域市行政。
 
-    xvi. 隶属于省(Depaertments)的省区(Arrondissement of Depaertments)为三级辅助性行政区，副省会(Sous-prefecture)是省区政府所在地。
+    xvi. 广域市市长(Metropolitan Sindaco)的选举施行相对多数制，任期为每届5年，由各县(Canton)选区单位内的公民选出。
 
-    xvii. 共和国政府通过内政部会议决定任免副省长(Sous-Prefet)协助省长管理各省区。
+    xvii. 隶属于省(Depaertments)的省区(Arrondissement of Depaertments)为三级辅助性行政区，副省会(Sous-prefecture)是省区政府所在地。
 
-    xviii. 隶属于省区(Arrondissement of Depaertments)或者广域市(Metropolitan Citta)的公社(Communes)为四级行政区，行政总部(Subprefecture) 是公社政府所在地。
+    xviii. 共和国政府通过内政部会议决定任免副省长(Sous-Prefet)协助省长管理各省区。
 
-    xix. 委员会(Municipal council)的选举施行单记让渡制，任期为每届7年，公社内的市民选出。
+    xix. 隶属于省区(Arrondissement of Depaertments)或者广域市(Metropolitan Citta)的公社(Communes)为四级行政区，行政总部(Subprefecture) 是公社政府所在地。
 
-    xx. 由公社委员会选举产生的市长兼公社委员会主席(Maire est egalement Preseidente of Municipal Council)需负责管理公社委员会活动，负责市政厅(Mairie)的运行。
+    xx. 委员会(Municipal council)的选举施行单记让渡制，任期为每届7年，公社内的市民选出。
 
-    xxi. 由公社委员会选举产生的市政厅(Mairie)需负责公社行政。
+    xxi. 由公社委员会选举产生的市长兼公社委员会主席(Maire est egalement Preseidente of Municipal Council)需负责管理公社委员会活动，负责市政厅(Mairie)的运行。
+
+    xxii. 由公社委员会选举产生的市政厅(Mairie)需负责公社行政。
+
+    xxiii. 共和国政府设立于各大区之大区区长（Prefet of Region）代表共和国中央政府行使监督权。各大区议会、省议会、广域市议会及公社委员会所通过之规章、决议，以及各大区主席、广域市市长及公社市长所发布之行政命令，凡违反共和国宪法、共和国法律或超越其法定权限者，大区区长有权向宪法法院或行政法院提起诉讼并暂停其效力；经法院裁定违宪或违法者，中央政府有权直接予以撤销。
+
+    xxiv. 广域市市长（Metropolitan Sindaco）、大区议会主席、省议会主席及公社市长，虽经直接选举或地方议会选举产生，但若有下列情形之一者，经总理提请、总统发布行政命令，或经宪法法院裁定，得直接剥夺其职务并解除其行政权力： 1 违背共和国宪法、从事分裂国家、破坏共和国不可分割性之行为； 2 严重拒绝执行共和国法律或中央政府依法下达之全国性行政指令； 3 因犯重大罪行、严重行政失信或腐败经司法机关或宪法法院审理查实。民选地方首长被解职后，由共和国政府任命之大区区长或省长指定临时代理人掌管行政，并在 60 日内重新举行地方选举。
+
+    xxv. 当各大区议会、省议会或广域市议会因政治僵局无法运作、连续六个月无法通过预算、严重违法违宪，或其行为危及共和国国家安全与统一时，总理在咨询大区区长并经参议院同意后，得提请总统发布命令，解散该地方议会并宣布重新选举。在议会解散至新议会成立期间，该地方之行政与立法救济权力由大区区长暂行代管。
+
+    xxvi. 当某一各大区、广域市或省拒绝履行宪法与法律赋予之义务，或其行为严重损害共和国之整体利益与主权统一时，总理在咨询宪法法院并经共和国议会参议院三分之二绝对多数批准后，总统得发布“中央接管令”： 1 暂停该大区、广域市或省之部分或全部地方自治权力； 2 将该地方之行政权、财政权及警察指挥权全面收归共和国中央政府，由大区区长（Prefet of Region）或中央特派员全权行使； 3 必要时得动用共和国武装力量或国家警察维持该地区之宪政秩序。中央接管之期限每次不得超过十二个月，经参议院批准得延长。
+
+    xxvii. 共和国实行统一税制与财政统筹。地方政府之财政自主权不得违背国家财政统一原则。凡地方政府非法举债、陷入严重财政破产危及国家金融安全，或将财政资金用于违宪、分裂国家之用途时，共和国财政部经总理批准，有权冻结中央对该地方之财政转移支付及税收返还，并接管该地方之财政预算审查权。
 
 VI  宪法的解释与条款暂停
 
