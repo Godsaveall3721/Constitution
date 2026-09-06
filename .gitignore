@@ -1,0 +1,11 @@
+build/
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
+*.out
+*.dSYM/
+compile_commands.json
+.cache/

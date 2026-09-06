@@ -201,6 +201,59 @@ constitution_result_t constitution_summary(constitution_t *constitution)
     return result;
 }
 
+static bool constitution_role_counts_for_college(const char *role_fragment)
+{
+    if (role_fragment == NULL) {
+        return false;
+    }
+
+    return strstr(role_fragment, "议员") != NULL ||
+           strstr(role_fragment, "参议员") != NULL ||
+           strstr(role_fragment, "众议员") != NULL;
+}
+
+size_t constitution_count_members_by_role(constitution_t *constitution, const char *role_fragment)
+{
+    if (constitution == NULL || role_fragment == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->member_count; ++index) {
+        member_t *member = model->members[index];
+        if (member != NULL && member->role != NULL && constitution_role_counts_for_college(role_fragment)) {
+            if (strstr(member->role, role_fragment) != NULL) {
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+
+size_t constitution_count_electoral_college_members(const constitution_t *constitution)
+{
+    if (constitution == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->member_count; ++index) {
+        member_t *member = model->members[index];
+        if (member == NULL || member->role == NULL) {
+            continue;
+        }
+
+        if (strstr(member->role, "议员") != NULL || strstr(member->role, "参议员") != NULL || strstr(member->role, "众议员") != NULL) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
 static void **constitution_grow_pointer_array(void **items, size_t count, size_t *capacity)
 {
     size_t new_capacity = (*capacity == 0) ? 4 : (*capacity * 2);

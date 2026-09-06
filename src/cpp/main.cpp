@@ -1,14 +1,14 @@
 #include "constitution.hpp"
+#include "config_book.hpp"
+#include "election_book.hpp"
 
 extern "C" {
+#include "executive.h"
 #include "member.h"
-#include "config.h"
 }
 
-#include <algorithm>
 #include <iostream>
 #include <string>
-#include <vector>
 
 static constitution_status_t 试运行(void *context)
 {
@@ -16,18 +16,13 @@ static constitution_status_t 试运行(void *context)
     return CONSTITUTION_STATUS_OK;
 }
 
-static unsigned long long clamp_to_ull(double value)
-{
-    if (value < 0.0) {
-        return 0ULL;
-    }
-    return static_cast<unsigned long long>(value + 0.5);
-}
-
 int main()
 {
     republic::Constitution constitution;
     constitution_t *model = constitution.native();
+
+    republic::cpp::ConfigBook configBook;
+    configBook.load("../config");
 
     constitution_load_config_directory(model, "../config");
 
@@ -80,48 +75,26 @@ int main()
     }
 
     std::cout << "合计：" << total_seats << " 席\n";
+    std::cout << "\n";
+
+    configBook.printPartyGallery(std::cout);
+
     std::cout << "\n模拟结果：\n";
 
-    struct ListResult {
-        const char *name;
-        double support;
-        size_t seats;
-    };
-
-    std::vector<ListResult> lists = {
-        {"共和国前进联盟", 0.342, 0},
-        {"社会共和阵线", 0.281, 0},
-        {"自由公民同盟", 0.197, 0},
-        {"地区平衡联合", 0.121, 0},
-        {"其他与无党派", 0.059, 0},
-    };
-
-    size_t allocated = 0;
-    for (size_t index = 0; index < lists.size(); ++index) {
-        size_t seats = clamp_to_ull(lists[index].support * static_cast<double>(total_seats));
-        lists[index].seats = seats;
-        allocated += seats;
+    republic::cpp::ElectionBook electionBook(total_seats);
+    std::vector<std::pair<std::string, double>> shares;
+    const auto &parties = configBook.parties();
+    for (const auto &party : parties) {
+        shares.emplace_back(party.name, party.voteShare / 100.0);
     }
-    while (allocated < total_seats) {
-        ++lists.front().seats;
-        ++allocated;
-    }
-    while (allocated > total_seats) {
-        for (auto it = lists.rbegin(); it != lists.rend() && allocated > total_seats; ++it) {
-            if (it->seats > 0) {
-                --it->seats;
-                --allocated;
-            }
-        }
-    }
-
-    for (const auto &list : lists) {
-        std::cout << list.name << "：" << list.seats << " 席（" << static_cast<int>(list.support * 1000.0) / 10.0 << "%）\n";
-    }
+    electionBook.loadFromPartyShares(shares);
+    electionBook.balanceSeats();
+    electionBook.printSeatTable(std::cout);
 
     std::cout << "\n多数门槛：61 席\n";
-    std::cout << "最大党团：共和国前进联盟，未过半，需要联合组阁。\n";
-    std::cout << "可能联合对象：社会共和阵线 + 地区平衡联合。\n";
+    const auto *largestBloc = electionBook.largestBloc();
+    std::cout << "最大党团：" << (largestBloc == nullptr ? "无" : largestBloc->name) << "，需要联合组阁。\n";
+    std::cout << "可能联合对象：社会民主联盟 + 绿党与公民联盟 + 自由复兴党。\n";
 
     std::cout << "\n【机关摘要】\n";
     constitution_print_summary(model);

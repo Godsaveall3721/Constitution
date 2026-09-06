@@ -59,6 +59,9 @@ void constitution_init(constitution_t *constitution);
 void constitution_reset(constitution_t *constitution);
 constitution_result_t constitution_summary(constitution_t *constitution);
 
+size_t constitution_count_members_by_role(constitution_t *constitution, const char *role_fragment);
+size_t constitution_count_electoral_college_members(const constitution_t *constitution);
+
 constituency_t *constitution_add_constituency(constitution_t *constitution, const char *name, const char *label, const char *seat_name, constitution_constituency_kind_t kind, unsigned long long population, const char *parent_name);
 member_t *constitution_add_member(constitution_t *constitution, const char *name, const char *role, unsigned age, const char *constituency_name);
 constitution_status_t constitution_load_config_directory(constitution_t *constitution, const char *directory);

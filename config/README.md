@@ -6,6 +6,7 @@
 
 - `regions.csv`：行政区、人口、隶属关系
 - `people.csv`：人名、职务、年龄、所属行政区
+- `parties.csv`：政党、意识形态、基础票份额
 
 ## 格式
 
@@ -41,6 +42,16 @@ name,role,age,constituency
 - `role`：职务或身份
 - `age`：年龄
 - `constituency`：所属行政区
+
+### `parties.csv`
+
+```text
+name,ideology,vote_share
+```
+
+- `name`：政党名称
+- `ideology`：意识形态或政治家族
+- `vote_share`：基础票份额，单位为百分比
 
 ## 说明
 

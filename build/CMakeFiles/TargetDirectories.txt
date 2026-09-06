@@ -1,3 +1,0 @@
-/mnt/DataDisk/ServerDisk/Podmanbin/home/Constitution/build/CMakeFiles/Constitution.dir
-/mnt/DataDisk/ServerDisk/Podmanbin/home/Constitution/build/CMakeFiles/edit_cache.dir
-/mnt/DataDisk/ServerDisk/Podmanbin/home/Constitution/build/CMakeFiles/rebuild_cache.dir
