@@ -8,7 +8,47 @@ extern "C" {
 }
 
 #include <iostream>
+#include <filesystem>
+#include <system_error>
 #include <string>
+
+namespace fs = std::filesystem;
+
+static std::string resolve_config_directory()
+{
+    std::error_code error;
+    const fs::path executable = fs::read_symlink("/proc/self/exe", error);
+    if (!error) {
+        const fs::path executable_directory = executable.parent_path();
+        const fs::path candidates[] = {
+            executable_directory / "../config",
+            executable_directory / "config",
+            executable_directory.parent_path() / "config",
+        };
+
+        for (const auto &candidate : candidates) {
+            if (fs::exists(candidate, error) && fs::is_directory(candidate, error)) {
+                return candidate.lexically_normal().string();
+            }
+        }
+    }
+
+    const fs::path current = fs::current_path();
+    const fs::path candidates[] = {
+        current / "config",
+        current / "../config",
+        current / "../Constitution/config",
+    };
+
+    for (const auto &candidate : candidates) {
+        std::error_code error;
+        if (fs::exists(candidate, error) && fs::is_directory(candidate, error)) {
+            return candidate.lexically_normal().string();
+        }
+    }
+
+    return "../config";
+}
 
 static constitution_status_t 试运行(void *context)
 {
@@ -21,10 +61,12 @@ int main()
     republic::Constitution constitution;
     constitution_t *model = constitution.native();
 
-    republic::cpp::ConfigBook configBook;
-    configBook.load("../config");
+    const std::string configDirectory = resolve_config_directory();
 
-    constitution_load_config_directory(model, "../config");
+    republic::cpp::ConfigBook configBook;
+    configBook.load(configDirectory);
+
+    constitution_load_config_directory(model, configDirectory.c_str());
 
     auto *共和国议会 = constitution_add_body(model, "共和国议会", CONSTITUTION_BODY_KIND_PALACE, 120);
     auto *大区议会 = constitution_add_body(model, "大区议会", CONSTITUTION_BODY_KIND_REGIONAL_COUNCIL, 80);

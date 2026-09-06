@@ -19,8 +19,12 @@ typedef struct constitution_executive_resolution {
     size_t electoral_college_members;
     const char *president_method;
     const char *government_head;
+    const char *cabinet_presidency;
     const char *executive_power;
+    const char *president_vote_rights;
+    const char *prime_minister_role;
     const char *cabinet_note;
+    const char *electoral_college_note;
 } constitution_executive_resolution_t;
 
 constitution_executive_resolution_t constitution_resolve_executive_mode(double direct_bill_support_ratio, size_t electoral_college_members);
