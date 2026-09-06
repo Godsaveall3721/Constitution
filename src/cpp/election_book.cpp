@@ -64,5 +64,10 @@ const SeatAllocation *ElectionBook::largestBloc() const
     });
 }
 
+const std::vector<SeatAllocation> &ElectionBook::allocations() const
+{
+    return allocations_;
+}
+
 } // namespace cpp
 } // namespace republic

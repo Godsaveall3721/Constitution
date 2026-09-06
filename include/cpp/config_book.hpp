@@ -19,6 +19,15 @@ struct PartyRecord {
     double voteShare = 0.0;
 };
 
+struct ElectoralDistrictRecord {
+    std::string name;
+    std::string kind;
+    std::string label;
+    std::string seatName;
+    unsigned long long population = 0;
+    std::string parent;
+};
+
 class ConfigBook {
 public:
     ConfigBook() = default;
@@ -26,10 +35,14 @@ public:
     bool load(const std::string &directory);
 
     const std::vector<PartyRecord> &parties() const;
+    const std::vector<ElectoralDistrictRecord> &electoralDistricts() const;
     void printPartyGallery(std::ostream &stream) const;
+    void printElectoralDistrictGallery(std::ostream &stream) const;
+    void addElectoralDistrict(ElectoralDistrictRecord record);
 
 private:
     std::vector<PartyRecord> parties_;
+    std::vector<ElectoralDistrictRecord> electoralDistricts_;
 };
 
 } // namespace cpp

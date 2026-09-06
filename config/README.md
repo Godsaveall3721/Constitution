@@ -5,6 +5,7 @@
 ## 当前已启用
 
 - `regions.csv`：行政区、人口、隶属关系
+- `electoral_districts.csv`：与 `regions.csv` 对齐的选区条目
 - `people.csv`：人名、职务、年龄、所属行政区
 - `parties.csv`：政党、意识形态、基础票份额
 
@@ -31,6 +32,21 @@ name,kind,label,seat_name,population,parent
 - 四级：`省区`、`公社`
 
 这份配置已经把大区下面的二级、三级、四级行政区一并展开，并用 `label` 字段标出首都、首府、省会、中心城市、副省会；`seat_name` 负责记录对应的政府驻地名称，便于后续录入人名、议员、区长、区议会、委员会等对象。
+
+### `electoral_districts.csv`
+
+```text
+name,kind,label,seat_name,population,parent
+```
+
+- `name`：选区名称，和 `regions.csv` 的行政区名称保持同名对应
+- `kind`：选区层级，通常与行政区种类一致
+- `label`：选区属性标记，直接继承自对应行政区
+- `seat_name`：选区驻地名称，直接继承自对应行政区
+- `population`：选区人口，直接继承自对应行政区
+- `parent`：上级选区或上级行政区，直接继承自对应行政区
+
+这个文件专门服务于 `联立制`、`并立制` 和总统选举大会等选举结构，避免把选区信息全部塞进 `regions.csv`。
 
 ### `people.csv`
 

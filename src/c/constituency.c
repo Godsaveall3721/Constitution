@@ -61,6 +61,7 @@ const char *constitution_constituency_kind_name(const constitution_constituency_
     case CONSTITUTION_CONSTITUENCY_KIND_METROPOLITAN_CITY: return "广域市";
     case CONSTITUTION_CONSTITUENCY_KIND_SUB_PREFECTURE: return "省区";
     case CONSTITUTION_CONSTITUENCY_KIND_COMMUNE: return "公社";
+    case CONSTITUTION_CONSTITUENCY_KIND_ELECTORAL_DISTRICT: return "选区";
     default: return "其他行政区";
     }
 }

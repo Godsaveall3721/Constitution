@@ -61,6 +61,12 @@ constitution_result_t constitution_summary(constitution_t *constitution);
 
 size_t constitution_count_members_by_role(constitution_t *constitution, const char *role_fragment);
 size_t constitution_count_electoral_college_members(const constitution_t *constitution);
+size_t constitution_count_constituencies_by_kind(const constitution_t *constitution, constitution_constituency_kind_t kind);
+size_t constitution_count_bodies_by_kind(constitution_t *constitution, constitution_body_kind_t kind);
+size_t constitution_count_offices_by_kind(constitution_t *constitution, constitution_office_kind_t kind);
+size_t constitution_count_procedures_by_kind(constitution_t *constitution, constitution_procedure_kind_t kind);
+size_t constitution_count_documents_by_kind(constitution_t *constitution, constitution_document_kind_t kind);
+size_t constitution_count_elections_by_kind(constitution_t *constitution, constitution_election_kind_t kind);
 
 constituency_t *constitution_add_constituency(constitution_t *constitution, const char *name, const char *label, const char *seat_name, constitution_constituency_kind_t kind, unsigned long long population, const char *parent_name);
 member_t *constitution_add_member(constitution_t *constitution, const char *name, const char *role, unsigned age, const char *constituency_name);
@@ -77,6 +83,7 @@ law_t *constitution_add_law(constitution_t *constitution, const char *name, cons
 court_t *constitution_add_court(constitution_t *constitution, const char *name, const char *basis, bool constitutional_review);
 
 void constitution_print_summary(constitution_t *constitution);
+void constitution_print_exhaustive_report(constitution_t *constitution);
 
 #ifdef __cplusplus
 }

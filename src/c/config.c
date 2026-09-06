@@ -153,6 +153,50 @@ static constitution_status_t load_people_csv(constitution_t *constitution, const
     return CONSTITUTION_STATUS_OK;
 }
 
+static constitution_status_t load_electoral_districts_csv(constitution_t *constitution, const char *path)
+{
+    FILE *file = fopen(path, "r");
+    if (file == NULL) {
+        return CONSTITUTION_STATUS_NOT_FOUND;
+    }
+
+    char line[1024];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        char *cursor = trim_in_place(line);
+        if (cursor == NULL || *cursor == '\0' || *cursor == '#') {
+            continue;
+        }
+
+        char *fields[6] = {0};
+        size_t field_count = 0;
+        char *token = strtok(cursor, ",");
+        while (token != NULL && field_count < 6) {
+            fields[field_count++] = trim_in_place(token);
+            token = strtok(NULL, ",");
+        }
+
+        if (field_count < 6 || strcmp(fields[0], "name") == 0) {
+            continue;
+        }
+
+        const char *label = (fields[2] == NULL || fields[2][0] == '\0' || strcmp(fields[2], "-") == 0) ? NULL : fields[2];
+        const char *seat_name = (fields[3] == NULL || fields[3][0] == '\0' || strcmp(fields[3], "-") == 0) ? NULL : fields[3];
+        const char *parent_text = (fields[5] == NULL || fields[5][0] == '\0' || strcmp(fields[5], "-") == 0) ? NULL : fields[5];
+        unsigned long long population = strtoull(fields[4], NULL, 10);
+
+        constitution_add_constituency(constitution,
+                                      fields[0],
+                                      label,
+                                      seat_name,
+                                      CONSTITUTION_CONSTITUENCY_KIND_ELECTORAL_DISTRICT,
+                                      population,
+                                      parent_text);
+    }
+
+    fclose(file);
+    return CONSTITUTION_STATUS_OK;
+}
+
 constitution_status_t constitution_load_config_directory(constitution_t *constitution, const char *directory)
 {
     if (constitution == NULL || directory == NULL) {
@@ -177,6 +221,16 @@ constitution_status_t constitution_load_config_directory(constitution_t *constit
     if (probe != NULL) {
         fclose(probe);
         constitution_status_t status = load_people_csv(constitution, path);
+        if (status != CONSTITUTION_STATUS_OK && status != CONSTITUTION_STATUS_NOT_FOUND) {
+            return status;
+        }
+    }
+
+    join_path(path, sizeof(path), directory, "electoral_districts.csv");
+    probe = fopen(path, "r");
+    if (probe != NULL) {
+        fclose(probe);
+        constitution_status_t status = load_electoral_districts_csv(constitution, path);
         if (status != CONSTITUTION_STATUS_OK && status != CONSTITUTION_STATUS_NOT_FOUND) {
             return status;
         }

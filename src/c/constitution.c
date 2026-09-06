@@ -254,6 +254,138 @@ size_t constitution_count_electoral_college_members(const constitution_t *consti
     return count;
 }
 
+static size_t constitution_count_constituencies_by_kind_impl(const constitution_t *constitution, constitution_constituency_kind_t kind)
+{
+    if (constitution == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->constituency_count; ++index) {
+        constituency_t *item = model->constituencies[index];
+        if (item != NULL && item->kind == kind) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+static size_t constitution_count_bodies_by_kind_impl(const constitution_t *constitution, constitution_body_kind_t kind)
+{
+    if (constitution == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->body_count; ++index) {
+        body_t *item = model->bodies[index];
+        if (item != NULL && item->kind == kind) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+static size_t constitution_count_offices_by_kind_impl(const constitution_t *constitution, constitution_office_kind_t kind)
+{
+    if (constitution == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->office_count; ++index) {
+        office_t *item = model->offices[index];
+        if (item != NULL && item->kind == kind) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+static size_t constitution_count_procedures_by_kind_impl(const constitution_t *constitution, constitution_procedure_kind_t kind)
+{
+    if (constitution == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->procedure_count; ++index) {
+        procedure_t *item = model->procedures[index];
+        if (item != NULL && item->kind == kind) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+static size_t constitution_count_documents_by_kind_impl(const constitution_t *constitution, constitution_document_kind_t kind)
+{
+    if (constitution == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->document_count; ++index) {
+        document_t *item = model->documents[index];
+        if (item != NULL && item->kind == kind) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+static size_t constitution_count_elections_by_kind_impl(const constitution_t *constitution, constitution_election_kind_t kind)
+{
+    if (constitution == NULL) {
+        return 0;
+    }
+
+    const constitution_t *model = (const constitution_t *)constitution;
+    size_t count = 0;
+    for (size_t index = 0; index < model->election_count; ++index) {
+        election_t *item = model->elections[index];
+        if (item != NULL && item->kind == kind) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+size_t constitution_count_constituencies_by_kind(const constitution_t *constitution, constitution_constituency_kind_t kind)
+{
+    return constitution_count_constituencies_by_kind_impl(constitution, kind);
+}
+
+size_t constitution_count_bodies_by_kind(constitution_t *constitution, constitution_body_kind_t kind)
+{
+    return constitution_count_bodies_by_kind_impl(constitution, kind);
+}
+
+size_t constitution_count_offices_by_kind(constitution_t *constitution, constitution_office_kind_t kind)
+{
+    return constitution_count_offices_by_kind_impl(constitution, kind);
+}
+
+size_t constitution_count_procedures_by_kind(constitution_t *constitution, constitution_procedure_kind_t kind)
+{
+    return constitution_count_procedures_by_kind_impl(constitution, kind);
+}
+
+size_t constitution_count_documents_by_kind(constitution_t *constitution, constitution_document_kind_t kind)
+{
+    return constitution_count_documents_by_kind_impl(constitution, kind);
+}
+
+size_t constitution_count_elections_by_kind(constitution_t *constitution, constitution_election_kind_t kind)
+{
+    return constitution_count_elections_by_kind_impl(constitution, kind);
+}
+
 static void **constitution_grow_pointer_array(void **items, size_t count, size_t *capacity)
 {
     size_t new_capacity = (*capacity == 0) ? 4 : (*capacity * 2);
@@ -586,4 +718,160 @@ void constitution_print_summary(constitution_t *constitution)
     printf("- 弹劾：%zu\n", constitution->impeachment_count);
     printf("- 法律：%zu\n", constitution->law_count);
     printf("- 法院：%zu\n", constitution->court_count);
+}
+
+void constitution_print_exhaustive_report(constitution_t *constitution)
+{
+    if (constitution == NULL) {
+        printf("《宪法》：模型为空\n");
+        return;
+    }
+
+    printf("\n【一、前言】\n");
+    printf("- 共和体制：%s\n", constitution_count_constituencies_by_kind(constitution, CONSTITUTION_CONSTITUENCY_KIND_NATION) > 0 ? "已装配" : "未装配");
+    printf("- 国家主权与公民复决：%zu 项复决对象，%zu 名人名录成员\n",
+           constitution->referendum_count,
+           constitution->member_count);
+    printf("- 选举：%zu 个选举对象；政党配置来自 config/parties.csv\n", constitution->election_count);
+    printf("- 议员构成：%zu 名具有议员/参议员/众议员身份的成员\n", constitution_count_electoral_college_members(constitution));
+
+    printf("\n【二、总统】\n");
+    printf("- 总统职务：%zu\n", constitution_count_offices_by_kind(constitution, CONSTITUTION_OFFICE_KIND_PRESIDENT));
+    printf("- 总理职务：%zu\n", constitution_count_offices_by_kind(constitution, CONSTITUTION_OFFICE_KIND_PRIME_MINISTER));
+    printf("- 总统/内阁相关文书：%zu\n", constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_DECREE) + constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_ORDER) + constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_RESOLUTION));
+    printf("- 总统缺位、解散、复决、紧急命令等程序：%zu\n", constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_APPOINTMENT) + constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_DISSOLUTION) + constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_REFERENDUM));
+
+    printf("\n【三、总理的内阁和国家议会】\n");
+    printf("- 国家议会合议体：%zu\n", constitution_count_bodies_by_kind(constitution, CONSTITUTION_BODY_KIND_NATIONAL_ASSEMBLY));
+    printf("- 共和国议会：%zu\n", constitution_count_bodies_by_kind(constitution, CONSTITUTION_BODY_KIND_PALACE));
+    printf("- 大区议会：%zu\n", constitution_count_bodies_by_kind(constitution, CONSTITUTION_BODY_KIND_REGIONAL_COUNCIL));
+    printf("- 省议会：%zu\n", constitution_count_bodies_by_kind(constitution, CONSTITUTION_BODY_KIND_DEPARTMENTAL_COUNCIL));
+    printf("- 广域市议会：%zu\n", constitution_count_bodies_by_kind(constitution, CONSTITUTION_BODY_KIND_METROPOLITAN_COUNCIL));
+    printf("- 公社委员会：%zu\n", constitution_count_bodies_by_kind(constitution, CONSTITUTION_BODY_KIND_MUNICIPAL_COUNCIL));
+    printf("- 委员会：%zu\n", constitution_count_bodies_by_kind(constitution, CONSTITUTION_BODY_KIND_COMMITTEE));
+    printf("- 议事/信任/不信任/解散/立法程序：%zu\n", constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_ELECTION) + constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_IMPEACHMENT) + constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_DISSOLUTION));
+    printf("- 常规法案与修正案：%zu\n", constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_BILL) + constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_AMENDMENT) + constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_RESOLUTION));
+
+    printf("\n【四、共和国司法】\n");
+    printf("- 宪法法院：%zu\n", constitution->court_count);
+    printf("- 违宪审查/解释/条款暂停程序：%zu\n", constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_REVIEW) + constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_EXPLANATION) + constitution_count_procedures_by_kind(constitution, CONSTITUTION_PROCEDURE_KIND_SUSPENSION));
+    printf("- 法律：%zu\n", constitution->law_count);
+
+    printf("\n【五、地方】\n");
+    printf("- 共和国：%zu\n", constitution_count_constituencies_by_kind(constitution, CONSTITUTION_CONSTITUENCY_KIND_NATION));
+    printf("- 大区：%zu\n", constitution_count_constituencies_by_kind(constitution, CONSTITUTION_CONSTITUENCY_KIND_REGION));
+    printf("- 省：%zu\n", constitution_count_constituencies_by_kind(constitution, CONSTITUTION_CONSTITUENCY_KIND_PROVINCE));
+    printf("- 广域市：%zu\n", constitution_count_constituencies_by_kind(constitution, CONSTITUTION_CONSTITUENCY_KIND_METROPOLITAN_CITY));
+    printf("- 省区：%zu\n", constitution_count_constituencies_by_kind(constitution, CONSTITUTION_CONSTITUENCY_KIND_SUB_PREFECTURE));
+    printf("- 公社：%zu\n", constitution_count_constituencies_by_kind(constitution, CONSTITUTION_CONSTITUENCY_KIND_COMMUNE));
+
+    printf("\n【六、宪法的解释与条款暂停】\n");
+    printf("- 宪法法院：%zu\n", constitution->court_count);
+    printf("- 法律/条约/命令/决议相关文书：%zu\n",
+           constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_BILL) +
+           constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_AMENDMENT) +
+           constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_DECREE) +
+           constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_RESOLUTION) +
+           constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_TREATY) +
+           constitution_count_documents_by_kind(constitution, CONSTITUTION_DOCUMENT_KIND_ORDER));
+    printf("- 章条外规则与普通立法接口：%zu\n", constitution->law_count + constitution->procedure_count);
+
+    printf("\n【七、补充非宪法原文】\n");
+    printf("- 选举席位和人口比例条目：%zu\n", constitution_count_elections_by_kind(constitution, CONSTITUTION_ELECTION_KIND_CLOSED_LIST) + constitution_count_elections_by_kind(constitution, CONSTITUTION_ELECTION_KIND_OPEN_LIST) + constitution_count_elections_by_kind(constitution, CONSTITUTION_ELECTION_KIND_FREE_LIST));
+
+    printf("\n【配置目录】\n");
+    printf("- 行政区条目：%zu\n", constitution->constituency_count);
+    printf("- 人名条目：%zu\n", constitution->member_count);
+    printf("- 政党条目：通过 config/parties.csv 载入\n");
+
+    printf("\n【目录清单】\n");
+    printf("- 行政区：\n");
+    for (size_t index = 0; index < constitution->constituency_count; ++index) {
+        constituency_t *item = constitution->constituencies[index];
+        if (item != NULL) {
+            printf("  - %s｜%s｜人口 %llu\n", item->name != NULL ? item->name : "(空)", constitution_constituency_kind_name(item->kind), item->population);
+        }
+    }
+
+    printf("- 人名录：\n");
+    for (size_t index = 0; index < constitution->member_count; ++index) {
+        member_t *item = constitution->members[index];
+        if (item != NULL) {
+            printf("  - %s｜%s｜%u岁\n", item->name != NULL ? item->name : "(空)", item->role != NULL ? item->role : "(空)", item->age);
+        }
+    }
+
+    printf("- 合议体：\n");
+    for (size_t index = 0; index < constitution->body_count; ++index) {
+        body_t *item = constitution->bodies[index];
+        if (item != NULL) {
+            printf("  - %s｜%s｜席位 %zu\n", item->name != NULL ? item->name : "(空)", constitution_body_kind_name(item->kind), item->seat.total);
+        }
+    }
+
+    printf("- 职务：\n");
+    for (size_t index = 0; index < constitution->office_count; ++index) {
+        office_t *item = constitution->offices[index];
+        if (item != NULL) {
+            printf("  - %s｜%s\n", item->name != NULL ? item->name : "(空)", constitution_office_kind_name(item->kind));
+        }
+    }
+
+    printf("- 程序：\n");
+    for (size_t index = 0; index < constitution->procedure_count; ++index) {
+        procedure_t *item = constitution->procedures[index];
+        if (item != NULL) {
+            printf("  - %s｜%s\n", item->name != NULL ? item->name : "(空)", constitution_procedure_kind_name(item->kind));
+        }
+    }
+
+    printf("- 文书：\n");
+    for (size_t index = 0; index < constitution->document_count; ++index) {
+        document_t *item = constitution->documents[index];
+        if (item != NULL) {
+            printf("  - %s｜%s\n", item->name != NULL ? item->name : "(空)", constitution_document_kind_name(item->kind));
+        }
+    }
+
+    printf("- 选举：\n");
+    for (size_t index = 0; index < constitution->election_count; ++index) {
+        election_t *item = constitution->elections[index];
+        if (item != NULL) {
+            printf("  - %s｜%s｜席位 %zu｜选民 %zu\n", item->name != NULL ? item->name : "(空)", constitution_election_kind_name(item->kind), item->seat_count, item->voter_count);
+        }
+    }
+
+    printf("- 公民复决：\n");
+    for (size_t index = 0; index < constitution->referendum_count; ++index) {
+        referendum_t *item = constitution->referendums[index];
+        if (item != NULL) {
+            printf("  - %s\n", item->name != NULL ? item->name : "(空)");
+        }
+    }
+
+    printf("- 弹劾：\n");
+    for (size_t index = 0; index < constitution->impeachment_count; ++index) {
+        impeachment_t *item = constitution->impeachments[index];
+        if (item != NULL) {
+            printf("  - %s\n", item->name != NULL ? item->name : "(空)");
+        }
+    }
+
+    printf("- 法律：\n");
+    for (size_t index = 0; index < constitution->law_count; ++index) {
+        law_t *item = constitution->laws[index];
+        if (item != NULL) {
+            printf("  - %s｜%s\n",
+                   item->document.name != NULL ? item->document.name : "(空)",
+                   item->status_text != NULL ? item->status_text : "(空)");
+        }
+    }
+
+    printf("- 法院：\n");
+    for (size_t index = 0; index < constitution->court_count; ++index) {
+        court_t *item = constitution->courts[index];
+        if (item != NULL) {
+            printf("  - %s\n", item->name != NULL ? item->name : "(空)");
+        }
+    }
 }

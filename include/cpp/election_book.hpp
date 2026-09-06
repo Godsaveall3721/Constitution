@@ -23,6 +23,7 @@ public:
     void balanceSeats();
     void printSeatTable(std::ostream &stream) const;
     const SeatAllocation *largestBloc() const;
+    const std::vector<SeatAllocation> &allocations() const;
 
 private:
     std::size_t totalSeats_;
