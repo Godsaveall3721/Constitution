@@ -29,7 +29,7 @@ target_include_directories(Constitution PRIVATE
 )
 
 if (MSVC)
-    message(FATAL_ERROR "This project is tuned for GNU/Clang toolchains, not MSVC.")
+    message(FATAL_ERROR "项目只支持 GCC/Clang , 不支持 MSVC")
 endif()
 
 target_compile_options(Constitution PRIVATE -Wall -Wextra -Wpedantic)
