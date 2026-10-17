@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+卡托维兹副公社 (Katowice_Subprefecture_Commune),公社,副省会,-,500000,卡托维兹副省区 (Katowice_Subprefecture_District)
+卡托维兹公社 (Katowice_Commune),公社,-,-,1300000,卡托维兹副省区 (Katowice_Subprefecture_District)
+1号公社 (Katowice_Subprefecture_District_1_Commune),公社,-,-,500000,卡托维兹副省区 (Katowice_Subprefecture_District)

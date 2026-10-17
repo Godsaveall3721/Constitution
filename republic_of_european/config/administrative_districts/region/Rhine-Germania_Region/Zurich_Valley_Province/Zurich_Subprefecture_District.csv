@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+苏黎世副公社 (Zurich_Subprefecture_Commune),公社,副省会,-,500000,苏黎世副省区 (Zurich_Subprefecture_District)
+苏黎世公社 (Zurich_Commune),公社,-,-,1400000,苏黎世副省区 (Zurich_Subprefecture_District)
+1号公社 (Zurich_Subprefecture_District_1_Commune),公社,-,-,500000,苏黎世副省区 (Zurich_Subprefecture_District)

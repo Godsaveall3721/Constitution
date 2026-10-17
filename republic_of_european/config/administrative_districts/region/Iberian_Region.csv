@@ -1,0 +1,16 @@
+# name,kind,label,seat_name,population,parent
+马德里广域市 (Madrid_Metropolitan_City),广域市,-,马德里中心城市,6500000,伊比利亚大区 (Iberian_Region)
+巴塞罗那广域市 (Barcelona_Metropolitan_City),广域市,-,巴塞罗那中心城市,5600000,伊比利亚大区 (Iberian_Region)
+里斯本广域市 (Lisbon_Metropolitan_City),广域市,-,里斯本中心城市,4200000,伊比利亚大区 (Iberian_Region)
+波尔图广域市 (Porto_Metropolitan_City),广域市,-,波尔图中心城市,2500000,伊比利亚大区 (Iberian_Region)
+瓦伦西亚广域市 (Valencia_Metropolitan_City),广域市,-,瓦伦西亚中心城市,3100000,伊比利亚大区 (Iberian_Region)
+卡斯蒂利亚省 (Castile_Province),省,-,卡斯蒂利亚省会,12000000,伊比利亚大区 (Iberian_Region)
+安达卢西亚省 (Andalusia_Province),省,-,塞维利亚省会,11000000,伊比利亚大区 (Iberian_Region)
+加利西亚省 (Galicia_Province),省,-,克拉科夫省会,6000000,伊比利亚大区 (Iberian_Region)
+阿斯图里亚斯省 (Asturias_Province),省,-,阿斯图里亚斯省会,5000000,伊比利亚大区 (Iberian_Region)
+巴斯克省 (Basque_Province),省,-,毕尔巴鄂省会,5200000,伊比利亚大区 (Iberian_Region)
+阿拉贡省 (Aragon_Province),省,-,萨拉戈萨省会,5500000,伊比利亚大区 (Iberian_Region)
+葡萄牙北部省 (Northern_Portugal_Province),省,-,布拉加省会,7000000,伊比利亚大区 (Iberian_Region)
+阿连特茹省 (Alentejo_Province),省,-,埃武拉省会,4500000,伊比利亚大区 (Iberian_Region)
+巴利阿里群岛省 (Balearic_Islands_Province),省,-,帕尔马省会,3800000,伊比利亚大区 (Iberian_Region)
+

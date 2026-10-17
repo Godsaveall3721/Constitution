@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+慕尼黑公社 (Munich_Commune),公社,中心城市,-,1000000,慕尼黑广域市 (Munich_Metropolitan_City)
+1号公社 (Munich_Metropolitan_City_1_Commune),公社,-,-,500000,慕尼黑广域市 (Munich_Metropolitan_City)
+2号公社 (Munich_Metropolitan_City_2_Commune),公社,-,-,500000,慕尼黑广域市 (Munich_Metropolitan_City)

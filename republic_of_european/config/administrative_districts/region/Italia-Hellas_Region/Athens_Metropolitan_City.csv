@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+雅典公社 (Athens_Commune),公社,中心城市,-,650000,雅典广域市 (Athens_Metropolitan_City)
+1号公社 (Athens_Metropolitan_City_1_Commune),公社,-,-,500000,雅典广域市 (Athens_Metropolitan_City)
+2号公社 (Athens_Metropolitan_City_2_Commune),公社,-,-,500000,雅典广域市 (Athens_Metropolitan_City)

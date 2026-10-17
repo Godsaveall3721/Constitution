@@ -1,0 +1,21 @@
+# name,kind,label,seat_name,population,parent,basis_unit
+1号省选区 (Province_Constituency_001),省选区,-,-,4300000,亚平宁-希腊大区 (Italia-Hellas_Region),Roma_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,3200000,亚平宁-希腊大区 (Italia-Hellas_Region),Milano_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,3100000,亚平宁-希腊大区 (Italia-Hellas_Region),Napoli_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,3600000,亚平宁-希腊大区 (Italia-Hellas_Region),Athens_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,1100000,亚平宁-希腊大区 (Italia-Hellas_Region),Thessaloniki_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,10000000,亚平宁-希腊大区 (Italia-Hellas_Region),Lombardy_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,3700000,亚平宁-希腊大区 (Italia-Hellas_Region),Tuscany_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,4300000,亚平宁-希腊大区 (Italia-Hellas_Region),Piedmont_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,4900000,亚平宁-希腊大区 (Italia-Hellas_Region),Veneto_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,4000000,亚平宁-希腊大区 (Italia-Hellas_Region),Apulia_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,4800000,亚平宁-希腊大区 (Italia-Hellas_Region),Sicily_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,1600000,亚平宁-希腊大区 (Italia-Hellas_Region),Sardinia_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,350000,亚平宁-希腊大区 (Italia-Hellas_Region),Corsica_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,3800000,亚平宁-希腊大区 (Italia-Hellas_Region),Attica_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,2300000,亚平宁-希腊大区 (Italia-Hellas_Region),Macedonia_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,320000,亚平宁-希腊大区 (Italia-Hellas_Region),Epirus_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,2800000,亚平宁-希腊大区 (Italia-Hellas_Region),Albania_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,2100000,亚平宁-希腊大区 (Italia-Hellas_Region),North_Macedonia_Province
+7号省选区 (Province_Constituency_007),省选区,-,-,620000,亚平宁-希腊大区 (Italia-Hellas_Region),Montenegro_Province
+7号省选区 (Province_Constituency_007),省选区,-,-,550000,亚平宁-希腊大区 (Italia-Hellas_Region),Malta_Island_Province

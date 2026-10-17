@@ -1,0 +1,18 @@
+# name,kind,label,seat_name,population,parent,basis_unit
+1号省选区 (Province_Constituency_001),省选区,-,-,5000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Frankfurt_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,4500000,莱茵-日耳曼大区 (Rhine-Germania_Region),Berlin_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,2500000,莱茵-日耳曼大区 (Rhine-Germania_Region),Hamburg_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2600000,莱茵-日耳曼大区 (Rhine-Germania_Region),Munich_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2200000,莱茵-日耳曼大区 (Rhine-Germania_Region),Amsterdam_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2100000,莱茵-日耳曼大区 (Rhine-Germania_Region),Brussels_Metropolitan_City
+3号省选区 (Province_Constituency_003),省选区,-,-,17000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Bavaria_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,12500000,莱茵-日耳曼大区 (Rhine-Germania_Region),Baden-Württemberg_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,18000000,莱茵-日耳曼大区 (Rhine-Germania_Region),North_Rhine_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,9000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Lower_Saxony_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,7000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Saxony_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,9000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Swiss_Alps_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,8000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Zurich_Valley_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,8500000,莱茵-日耳曼大区 (Rhine-Germania_Region),Netherlands_Coast_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,10000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Flanders_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,8000000,莱茵-日耳曼大区 (Rhine-Germania_Region),Wallonia_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,3500000,莱茵-日耳曼大区 (Rhine-Germania_Region),Luxembourg_Province

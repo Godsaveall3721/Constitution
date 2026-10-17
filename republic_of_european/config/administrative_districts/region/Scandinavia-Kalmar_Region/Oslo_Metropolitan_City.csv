@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+奥斯陆公社 (Oslo_Commune),公社,中心城市,-,1000000,奥斯陆广域市 (Oslo_Metropolitan_City)
+1号公社 (Oslo_Metropolitan_City_1_Commune),公社,-,-,500000,奥斯陆广域市 (Oslo_Metropolitan_City)
+2号公社 (Oslo_Metropolitan_City_2_Commune),公社,-,-,500000,奥斯陆广域市 (Oslo_Metropolitan_City)

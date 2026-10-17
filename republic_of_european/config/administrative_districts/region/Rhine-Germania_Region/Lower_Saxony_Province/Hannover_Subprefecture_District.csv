@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+汉诺威副公社 (Hannover_Subprefecture_Commune),公社,副省会,-,500000,汉诺威副省区 (Hannover_Subprefecture_District)
+汉诺威公社 (Hannover_Commune),公社,-,-,1300000,汉诺威副省区 (Hannover_Subprefecture_District)
+1号公社 (Hannover_Subprefecture_District_1_Commune),公社,-,-,500000,汉诺威副省区 (Hannover_Subprefecture_District)

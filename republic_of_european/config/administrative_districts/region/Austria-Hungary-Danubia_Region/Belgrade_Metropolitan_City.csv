@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+贝尔格莱德公社 (Belgrade_Commune),公社,中心城市,-,1000000,贝尔格莱德广域市 (Belgrade_Metropolitan_City)
+1号公社 (Belgrade_Metropolitan_City_1_Commune),公社,-,-,500000,贝尔格莱德广域市 (Belgrade_Metropolitan_City)
+2号公社 (Belgrade_Metropolitan_City_2_Commune),公社,-,-,500000,贝尔格莱德广域市 (Belgrade_Metropolitan_City)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+普列夫利亚副公社 (Pleven_Subprefecture_Commune),公社,副省会,-,500000,普列夫利亚副省区 (Pleven_Subprefecture_District)
+普列夫利亚公社 (Pleven_Commune),公社,-,-,600000,普列夫利亚副省区 (Pleven_Subprefecture_District)
+1号公社 (Pleven_Subprefecture_District_1_Commune),公社,-,-,500000,普列夫利亚副省区 (Pleven_Subprefecture_District)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+奥尔良副公社 (Orleans_Subprefecture_Commune),公社,副省会,-,500000,奥尔良副省区 (Orleans_Subprefecture_District)
+奥尔良公社 (Orleans_Commune),公社,-,-,1200000,奥尔良副省区 (Orleans_Subprefecture_District)
+1号公社 (Orleans_Subprefecture_District_1_Commune),公社,-,-,500000,奥尔良副省区 (Orleans_Subprefecture_District)

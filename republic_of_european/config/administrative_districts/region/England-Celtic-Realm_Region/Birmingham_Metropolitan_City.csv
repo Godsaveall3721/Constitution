@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+伯明翰公社 (Birmingham_Commune),公社,中心城市,-,1000000,伯明翰广域市 (Birmingham_Metropolitan_City)
+1号公社 (Birmingham_Metropolitan_City_1_Commune),公社,-,-,500000,伯明翰广域市 (Birmingham_Metropolitan_City)
+2号公社 (Birmingham_Metropolitan_City_2_Commune),公社,-,-,500000,伯明翰广域市 (Birmingham_Metropolitan_City)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+埃武拉副公社 (Evora_Subprefecture_Commune),公社,副省会,-,500000,埃武拉副省区 (Evora_Subprefecture_District)
+埃武拉公社 (Evora_Commune),公社,-,-,600000,埃武拉副省区 (Evora_Subprefecture_District)
+1号公社 (Evora_Subprefecture_District_1_Commune),公社,-,-,500000,埃武拉副省区 (Evora_Subprefecture_District)

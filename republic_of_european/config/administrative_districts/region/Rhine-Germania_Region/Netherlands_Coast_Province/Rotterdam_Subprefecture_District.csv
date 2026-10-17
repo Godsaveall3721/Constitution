@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+鹿特丹副公社 (Rotterdam_Subprefecture_Commune),公社,副省会,-,500000,鹿特丹副省区 (Rotterdam_Subprefecture_District)
+鹿特丹公社 (Rotterdam_Commune),公社,-,-,1200000,鹿特丹副省区 (Rotterdam_Subprefecture_District)
+1号公社 (Rotterdam_Subprefecture_District_1_Commune),公社,-,-,500000,鹿特丹副省区 (Rotterdam_Subprefecture_District)

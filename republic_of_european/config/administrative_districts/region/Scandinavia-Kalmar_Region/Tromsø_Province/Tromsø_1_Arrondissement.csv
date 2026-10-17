@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+特罗姆瑟公社 (Tromso_Commune),公社,省会,-,700000,1号省区 (Tromsø_1_Arrondissement)
+1号公社 (Tromsø_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Tromsø_1_Arrondissement)
+2号公社 (Tromsø_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Tromsø_1_Arrondissement)

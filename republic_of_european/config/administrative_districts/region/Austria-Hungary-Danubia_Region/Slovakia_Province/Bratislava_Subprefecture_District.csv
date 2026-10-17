@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+布拉迪斯拉发副公社 (Bratislava_Subprefecture_Commune),公社,副省会,-,500000,布拉迪斯拉发副省区 (Bratislava_Subprefecture_District)
+布拉迪斯拉发公社 (Bratislava_Commune),公社,-,-,700000,布拉迪斯拉发副省区 (Bratislava_Subprefecture_District)
+1号公社 (Bratislava_Subprefecture_District_1_Commune),公社,-,-,500000,布拉迪斯拉发副省区 (Bratislava_Subprefecture_District)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+那不勒斯公社 (Napoli_Commune),公社,中心城市,-,900000,那不勒斯广域市 (Napoli_Metropolitan_City)
+1号公社 (Napoli_Metropolitan_City_1_Commune),公社,-,-,500000,那不勒斯广域市 (Napoli_Metropolitan_City)
+2号公社 (Napoli_Metropolitan_City_2_Commune),公社,-,-,500000,那不勒斯广域市 (Napoli_Metropolitan_City)

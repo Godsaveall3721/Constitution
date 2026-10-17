@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+卡迪夫副公社 (Cardiff_Subprefecture_Commune),公社,副省会,-,500000,卡迪夫副省区 (Cardiff_Subprefecture_District)
+卡迪夫公社 (Cardiff_Commune),公社,-,-,800000,卡迪夫副省区 (Cardiff_Subprefecture_District)
+1号公社 (Cardiff_Subprefecture_District_1_Commune),公社,-,-,500000,卡迪夫副省区 (Cardiff_Subprefecture_District)

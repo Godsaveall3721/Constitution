@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+维尔纽斯公社 (Vilnius_Commune),公社,中心城市,-,1000000,维尔纽斯广域市 (Vilnius_Metropolitan_City)
+1号公社 (Vilnius_Metropolitan_City_1_Commune),公社,-,-,500000,维尔纽斯广域市 (Vilnius_Metropolitan_City)
+2号公社 (Vilnius_Metropolitan_City_2_Commune),公社,-,-,500000,维尔纽斯广域市 (Vilnius_Metropolitan_City)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+布加勒斯特公社 (Bucharest_Commune),公社,中心城市,-,1000000,布加勒斯特广域市 (Bucharest_Metropolitan_City)
+1号公社 (Bucharest_Metropolitan_City_1_Commune),公社,-,-,500000,布加勒斯特广域市 (Bucharest_Metropolitan_City)
+2号公社 (Bucharest_Metropolitan_City_2_Commune),公社,-,-,500000,布加勒斯特广域市 (Bucharest_Metropolitan_City)

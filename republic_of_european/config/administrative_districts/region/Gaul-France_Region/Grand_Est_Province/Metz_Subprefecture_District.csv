@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+梅斯副公社 (Metz_Subprefecture_Commune),公社,副省会,-,500000,梅斯副省区 (Metz_Subprefecture_District)
+梅斯公社 (Metz_Commune),公社,-,-,700000,梅斯副省区 (Metz_Subprefecture_District)
+1号公社 (Metz_Subprefecture_District_1_Commune),公社,-,-,500000,梅斯副省区 (Metz_Subprefecture_District)

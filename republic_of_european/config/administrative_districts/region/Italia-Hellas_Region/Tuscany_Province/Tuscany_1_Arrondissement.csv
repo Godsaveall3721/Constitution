@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+佛罗伦萨公社 (Florence_Commune),公社,省会,-,380000,1号省区 (Tuscany_1_Arrondissement)
+1号公社 (Tuscany_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Tuscany_1_Arrondissement)
+2号公社 (Tuscany_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Tuscany_1_Arrondissement)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+尼斯副公社 (Nice_Subprefecture_Commune),公社,副省会,-,500000,尼斯副省区 (Nice_Subprefecture_District)
+尼斯公社 (Nice_Commune),公社,-,-,1000000,尼斯副省区 (Nice_Subprefecture_District)
+1号公社 (Nice_Subprefecture_District_1_Commune),公社,-,-,500000,尼斯副省区 (Nice_Subprefecture_District)

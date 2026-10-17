@@ -1,0 +1,16 @@
+# name,kind,label,seat_name,population,parent
+哥本哈根广域市 (Copenhagen_Metropolitan_City),广域市,-,哥本哈根中心城市,1600000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+斯德哥尔摩广域市 (Stockholm_Metropolitan_City),广域市,-,斯德哥尔摩中心城市,1800000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+奥斯陆广域市 (Oslo_Metropolitan_City),广域市,-,奥斯陆中心城市,1200000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+赫尔辛基广域市 (Helsinki_Metropolitan_City),广域市,-,赫尔辛基中心城市,1300000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+日德兰省 (Jutland_Province),省,-,日德兰省会,7200000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+西兰岛省 (Zealand_Province),省,-,西兰岛省会,6400000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+约塔兰省 (Götaland_Province),省,-,约塔兰省会,7600000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+斯维阿兰省 (Svealand_Province),省,-,斯维阿兰省会,7000000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+诺尔兰省 (Norrland_Province),省,-,诺尔兰省会,5000000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+挪威峡湾省 (Norwegian_Fjord_Province),省,-,挪威峡湾省会,4500000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+特罗姆瑟省 (Tromsø_Province),省,-,特罗姆瑟省会,3800000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+芬兰湖区省 (Finnish_Lakes_Province),省,-,芬兰湖区省会,4200000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+拉普兰省 (Lapland_Province),省,-,拉普兰省会,3600000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+冰岛省 (Iceland_Province),省,-,冰岛省会,2700000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region)
+

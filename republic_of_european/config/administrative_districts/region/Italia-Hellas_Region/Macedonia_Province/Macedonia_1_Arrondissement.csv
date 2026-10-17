@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+马其顿省会公社 (Macedonia_Provincial_Capital_Commune),公社,省会,-,320000,1号省区 (Macedonia_1_Arrondissement)
+1号公社 (Macedonia_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Macedonia_1_Arrondissement)
+2号公社 (Macedonia_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Macedonia_1_Arrondissement)

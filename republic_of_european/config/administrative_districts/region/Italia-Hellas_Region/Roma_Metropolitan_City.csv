@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+罗马公社 (Roma_Commune),公社,中心城市,-,2800000,罗马广域市 (Roma_Metropolitan_City)
+1号公社 (Roma_Metropolitan_City_1_Commune),公社,-,-,500000,罗马广域市 (Roma_Metropolitan_City)
+2号公社 (Roma_Metropolitan_City_2_Commune),公社,-,-,500000,罗马广域市 (Roma_Metropolitan_City)

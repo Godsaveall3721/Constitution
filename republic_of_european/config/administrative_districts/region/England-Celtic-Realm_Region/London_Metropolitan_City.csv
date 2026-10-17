@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+伦敦公社 (London_Commune),公社,中心城市,-,1000000,伦敦广域市 (London_Metropolitan_City)
+1号公社 (London_Metropolitan_City_1_Commune),公社,-,-,500000,伦敦广域市 (London_Metropolitan_City)
+2号公社 (London_Metropolitan_City_2_Commune),公社,-,-,500000,伦敦广域市 (London_Metropolitan_City)

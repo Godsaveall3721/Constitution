@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+鲁尔副公社 (Ruhr_Subprefecture_Commune),公社,副省会,-,500000,鲁尔副省区 (Ruhr_Subprefecture_District)
+多特蒙德公社 (Dortmund_Commune),公社,-,-,1600000,鲁尔副省区 (Ruhr_Subprefecture_District)
+1号公社 (Ruhr_Subprefecture_District_1_Commune),公社,-,-,500000,鲁尔副省区 (Ruhr_Subprefecture_District)

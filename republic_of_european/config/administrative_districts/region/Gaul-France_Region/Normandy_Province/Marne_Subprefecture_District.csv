@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+马恩副公社 (Marne_Subprefecture_Commune),公社,副省会,-,500000,马恩副省区 (Marne_Subprefecture_District)
+勒阿弗尔公社 (Le_Havre_Commune),公社,-,-,1200000,马恩副省区 (Marne_Subprefecture_District)
+马恩公社 (Marne_Commune),公社,省会,-,700000,马恩副省区 (Marne_Subprefecture_District)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+阿提卡省会公社 (Attica_Provincial_Capital_Commune),公社,省会,-,650000,1号省区 (Attica_1_Arrondissement)
+1号公社 (Attica_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Attica_1_Arrondissement)
+2号公社 (Attica_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Attica_1_Arrondissement)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+都灵公社 (Turin_Commune),公社,省会,-,850000,1号省区 (Piedmont_1_Arrondissement)
+1号公社 (Piedmont_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Piedmont_1_Arrondissement)
+2号公社 (Piedmont_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Piedmont_1_Arrondissement)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+切尔尼戈夫副公社 (Chernihiv_Subprefecture_Commune),公社,副省会,-,500000,切尔尼戈夫副省区 (Chernihiv_Subprefecture_District)
+切尔尼戈夫公社 (Chernihiv_Commune),公社,-,-,800000,切尔尼戈夫副省区 (Chernihiv_Subprefecture_District)
+1号公社 (Chernihiv_Subprefecture_District_1_Commune),公社,-,-,500000,切尔尼戈夫副省区 (Chernihiv_Subprefecture_District)

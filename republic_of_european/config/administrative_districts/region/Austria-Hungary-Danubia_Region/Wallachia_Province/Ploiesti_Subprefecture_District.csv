@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+普洛耶什蒂副公社 (Ploiesti_Subprefecture_Commune),公社,副省会,-,500000,普洛耶什蒂副省区 (Ploiesti_Subprefecture_District)
+普洛耶什蒂公社 (Ploiesti_Commune),公社,-,-,850000,普洛耶什蒂副省区 (Ploiesti_Subprefecture_District)
+1号公社 (Ploiesti_Subprefecture_District_1_Commune),公社,-,-,500000,普洛耶什蒂副省区 (Ploiesti_Subprefecture_District)

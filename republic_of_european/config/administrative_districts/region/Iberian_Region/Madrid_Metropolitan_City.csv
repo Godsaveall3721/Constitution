@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+马德里公社 (Madrid_Commune),公社,中心城市,-,1000000,马德里广域市 (Madrid_Metropolitan_City)
+1号公社 (Madrid_Metropolitan_City_1_Commune),公社,-,-,500000,马德里广域市 (Madrid_Metropolitan_City)
+2号公社 (Madrid_Metropolitan_City_2_Commune),公社,-,-,500000,马德里广域市 (Madrid_Metropolitan_City)

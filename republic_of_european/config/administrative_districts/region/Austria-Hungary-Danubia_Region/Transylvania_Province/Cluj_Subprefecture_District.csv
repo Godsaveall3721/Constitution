@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+克卢日副公社 (Cluj_Subprefecture_Commune),公社,副省会,-,500000,克卢日副省区 (Cluj_Subprefecture_District)
+克卢日公社 (Cluj_Commune),公社,-,-,1000000,克卢日副省区 (Cluj_Subprefecture_District)
+1号公社 (Cluj_Subprefecture_District_1_Commune),公社,-,-,500000,克卢日副省区 (Cluj_Subprefecture_District)

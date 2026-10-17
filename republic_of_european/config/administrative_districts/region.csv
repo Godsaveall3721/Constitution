@@ -1,0 +1,9 @@
+# name,kind,label,seat_name,population,parent
+高卢-法兰西大区 (Gaul-France_Region),大区,-,巴黎首府,90000000,欧罗巴共和国
+莱茵-日耳曼大区 (Rhine-Germania_Region),大区,-,法兰克福首府,88000000,欧罗巴共和国
+奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),大区,-,维也纳首府,76000000,欧罗巴共和国
+波兰-立陶宛大区 (Polonia-Lithuania_Region),大区,-,华沙首府,64000000,欧罗巴共和国
+斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),大区,-,哥本哈根首府,38000000,欧罗巴共和国
+伊比利亚大区 (Iberian_Region),大区,-,马德里首府,52000000,欧罗巴共和国
+亚平宁-希腊大区 (Italia-Hellas_Region),大区,-,罗马首府,74000000,欧罗巴共和国
+英格兰-凯尔特大区 (England-Celtic-Realm_Region),大区,-,伦敦首府,68000000,欧罗巴共和国

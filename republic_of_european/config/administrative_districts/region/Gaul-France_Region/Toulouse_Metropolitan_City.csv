@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+图卢兹公社 (Toulouse_Commune),公社,中心城市,-,1000000,图卢兹广域市 (Toulouse_Metropolitan_City)
+1号公社 (Toulouse_Metropolitan_City_1_Commune),公社,-,-,500000,图卢兹广域市 (Toulouse_Metropolitan_City)
+2号公社 (Toulouse_Metropolitan_City_2_Commune),公社,-,-,500000,图卢兹广域市 (Toulouse_Metropolitan_City)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+明斯克公社 (Minsk_Commune),公社,中心城市,-,1000000,明斯克广域市 (Minsk_Metropolitan_City)
+1号公社 (Minsk_Metropolitan_City_1_Commune),公社,-,-,500000,明斯克广域市 (Minsk_Metropolitan_City)
+2号公社 (Minsk_Metropolitan_City_2_Commune),公社,-,-,500000,明斯克广域市 (Minsk_Metropolitan_City)

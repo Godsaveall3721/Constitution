@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+莱茵中部副公社 (Middle_Rhine_Subprefecture_Commune),公社,副省会,-,500000,莱茵中部副省区 (Middle_Rhine_Subprefecture_District)
+科隆公社 (Cologne_Commune),公社,-,-,1800000,莱茵中部副省区 (Middle_Rhine_Subprefecture_District)
+莱茵中部公社 (Middle_Rhine_Commune),公社,省会,-,700000,莱茵中部副省区 (Middle_Rhine_Subprefecture_District)

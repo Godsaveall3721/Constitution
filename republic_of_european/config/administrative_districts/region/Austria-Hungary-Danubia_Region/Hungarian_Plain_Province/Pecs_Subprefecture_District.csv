@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+佩奇副公社 (Pecs_Subprefecture_Commune),公社,副省会,-,500000,佩奇副省区 (Pecs_Subprefecture_District)
+佩奇公社 (Pecs_Commune),公社,-,-,600000,佩奇副省区 (Pecs_Subprefecture_District)
+1号公社 (Pecs_Subprefecture_District_1_Commune),公社,-,-,500000,佩奇副省区 (Pecs_Subprefecture_District)

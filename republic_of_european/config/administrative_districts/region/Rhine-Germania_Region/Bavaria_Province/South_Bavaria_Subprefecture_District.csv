@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+巴伐利亚南部副公社 (South_Bavaria_Subprefecture_Commune),公社,副省会,-,500000,巴伐利亚南部副省区 (South_Bavaria_Subprefecture_District)
+慕尼黑南公社 (South_Munich_Commune),公社,-,-,1200000,巴伐利亚南部副省区 (South_Bavaria_Subprefecture_District)
+巴伐利亚南部公社 (South_Bavaria_Commune),公社,省会,-,700000,巴伐利亚南部副省区 (South_Bavaria_Subprefecture_District)

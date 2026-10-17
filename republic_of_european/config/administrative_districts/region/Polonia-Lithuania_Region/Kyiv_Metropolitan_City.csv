@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+基辅公社 (Kyiv_Commune),公社,中心城市,-,1000000,基辅广域市 (Kyiv_Metropolitan_City)
+1号公社 (Kyiv_Metropolitan_City_1_Commune),公社,-,-,500000,基辅广域市 (Kyiv_Metropolitan_City)
+2号公社 (Kyiv_Metropolitan_City_2_Commune),公社,-,-,500000,基辅广域市 (Kyiv_Metropolitan_City)

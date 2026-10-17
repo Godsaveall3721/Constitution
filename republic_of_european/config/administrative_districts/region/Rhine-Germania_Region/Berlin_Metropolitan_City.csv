@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+柏林公社 (Berlin_Commune),公社,中心城市,-,1000000,柏林广域市 (Berlin_Metropolitan_City)
+1号公社 (Berlin_Metropolitan_City_1_Commune),公社,-,-,500000,柏林广域市 (Berlin_Metropolitan_City)
+2号公社 (Berlin_Metropolitan_City_2_Commune),公社,-,-,500000,柏林广域市 (Berlin_Metropolitan_City)

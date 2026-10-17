@@ -1,0 +1,15 @@
+# name,kind,label,seat_name,population,parent,basis_unit
+1号省选区 (Province_Constituency_001),省选区,-,-,8000000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),London_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,3000000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Manchester_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,2800000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Birmingham_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,1800000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Edinburgh_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2100000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Dublin_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,14000000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),South_East_England_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,9000000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),South_West_England_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,8500000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Yorkshire_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,4800000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Highlands_and_Islands_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,4200000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Wales_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,5000000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Ulster_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,4500000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Leinster_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,3200000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Munster_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,2600000,英格兰-凯尔特大区 (England-Celtic-Realm_Region),Connacht_Province

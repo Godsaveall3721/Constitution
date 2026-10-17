@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+塞维利亚副公社 (Seville_Subprefecture_Commune),公社,副省会,-,500000,塞维利亚副省区 (Seville_Subprefecture_District)
+塞维利亚公社 (Seville_Commune),公社,-,-,1400000,塞维利亚副省区 (Seville_Subprefecture_District)
+1号公社 (Seville_Subprefecture_District_1_Commune),公社,-,-,500000,塞维利亚副省区 (Seville_Subprefecture_District)

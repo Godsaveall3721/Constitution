@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+维也纳公社 (Vienna_Commune),公社,中心城市,-,1000000,维也纳广域市 (Vienna_Metropolitan_City)
+1号公社 (Vienna_Metropolitan_City_1_Commune),公社,-,-,500000,维也纳广域市 (Vienna_Metropolitan_City)
+2号公社 (Vienna_Metropolitan_City_2_Commune),公社,-,-,500000,维也纳广域市 (Vienna_Metropolitan_City)

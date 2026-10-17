@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+里尔公社 (Lille_Commune),公社,中心城市,-,1000000,里尔广域市 (Lille_Metropolitan_City)
+1号公社 (Lille_Metropolitan_City_1_Commune),公社,-,-,500000,里尔广域市 (Lille_Metropolitan_City)
+2号公社 (Lille_Metropolitan_City_2_Commune),公社,-,-,500000,里尔广域市 (Lille_Metropolitan_City)

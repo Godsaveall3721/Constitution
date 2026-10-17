@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+安特卫普副公社 (Antwerp_Subprefecture_Commune),公社,副省会,-,500000,安特卫普副省区 (Antwerp_Subprefecture_District)
+安特卫普公社 (Antwerp_Commune),公社,-,-,1500000,安特卫普副省区 (Antwerp_Subprefecture_District)
+1号公社 (Antwerp_Subprefecture_District_1_Commune),公社,-,-,500000,安特卫普副省区 (Antwerp_Subprefecture_District)

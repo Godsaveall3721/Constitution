@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+马赛公社 (Marseille_Commune),公社,中心城市,-,1000000,马赛广域市 (Marseille_Metropolitan_City)
+1号公社 (Marseille_Metropolitan_City_1_Commune),公社,-,-,500000,马赛广域市 (Marseille_Metropolitan_City)
+2号公社 (Marseille_Metropolitan_City_2_Commune),公社,-,-,500000,马赛广域市 (Marseille_Metropolitan_City)

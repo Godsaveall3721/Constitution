@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+哥本哈根公社 (Copenhagen_Commune),公社,中心城市,-,1000000,哥本哈根广域市 (Copenhagen_Metropolitan_City)
+1号公社 (Copenhagen_Metropolitan_City_1_Commune),公社,-,-,500000,哥本哈根广域市 (Copenhagen_Metropolitan_City)
+2号公社 (Copenhagen_Metropolitan_City_2_Commune),公社,-,-,500000,哥本哈根广域市 (Copenhagen_Metropolitan_City)

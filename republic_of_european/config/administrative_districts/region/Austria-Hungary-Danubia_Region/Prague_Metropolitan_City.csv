@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+布拉格公社 (Prague_Commune),公社,中心城市,-,1000000,布拉格广域市 (Prague_Metropolitan_City)
+1号公社 (Prague_Metropolitan_City_1_Commune),公社,-,-,500000,布拉格广域市 (Prague_Metropolitan_City)
+2号公社 (Prague_Metropolitan_City_2_Commune),公社,-,-,500000,布拉格广域市 (Prague_Metropolitan_City)

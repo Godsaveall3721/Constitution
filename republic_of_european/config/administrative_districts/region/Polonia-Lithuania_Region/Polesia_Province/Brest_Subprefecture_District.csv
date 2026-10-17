@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+布列斯特副公社 (Brest_Subprefecture_Commune),公社,副省会,-,500000,布列斯特副省区 (Brest_Subprefecture_District)
+布列斯特公社 (Brest_Commune),公社,-,-,700000,布列斯特副省区 (Brest_Subprefecture_District)
+1号公社 (Brest_Subprefecture_District_1_Commune),公社,-,-,500000,布列斯特副省区 (Brest_Subprefecture_District)

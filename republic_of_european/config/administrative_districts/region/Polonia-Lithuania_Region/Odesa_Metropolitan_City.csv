@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+敖德萨公社 (Odesa_Commune),公社,中心城市,-,1000000,敖德萨广域市 (Odesa_Metropolitan_City)
+1号公社 (Odesa_Metropolitan_City_1_Commune),公社,-,-,500000,敖德萨广域市 (Odesa_Metropolitan_City)
+2号公社 (Odesa_Metropolitan_City_2_Commune),公社,-,-,500000,敖德萨广域市 (Odesa_Metropolitan_City)

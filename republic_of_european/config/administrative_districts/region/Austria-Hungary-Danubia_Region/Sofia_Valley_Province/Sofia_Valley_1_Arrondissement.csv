@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+索非亚谷地公社 (Sofia_Valley_Commune),公社,省会,-,700000,1号省区 (Sofia_Valley_1_Arrondissement)
+索非亚公社 (Sofia_Commune),公社,-,-,1000000,1号省区 (Sofia_Valley_1_Arrondissement)
+1号公社 (Sofia_Valley_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Sofia_Valley_1_Arrondissement)

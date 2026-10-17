@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+第戎副公社 (Dijon_Subprefecture_Commune),公社,副省会,-,500000,第戎副省区 (Dijon_Subprefecture_District)
+第戎公社 (Dijon_Commune),公社,-,-,800000,第戎副省区 (Dijon_Subprefecture_District)
+1号公社 (Dijon_Subprefecture_District_1_Commune),公社,-,-,500000,第戎副省区 (Dijon_Subprefecture_District)

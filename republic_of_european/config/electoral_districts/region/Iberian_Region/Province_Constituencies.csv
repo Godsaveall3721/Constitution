@@ -1,0 +1,15 @@
+# name,kind,label,seat_name,population,parent,basis_unit
+1号省选区 (Province_Constituency_001),省选区,-,-,6500000,伊比利亚大区 (Iberian_Region),Madrid_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,5600000,伊比利亚大区 (Iberian_Region),Barcelona_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,4200000,伊比利亚大区 (Iberian_Region),Lisbon_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2500000,伊比利亚大区 (Iberian_Region),Porto_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,3100000,伊比利亚大区 (Iberian_Region),Valencia_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,12000000,伊比利亚大区 (Iberian_Region),Castile_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,11000000,伊比利亚大区 (Iberian_Region),Andalusia_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,6000000,伊比利亚大区 (Iberian_Region),Galicia_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,5000000,伊比利亚大区 (Iberian_Region),Asturias_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,5200000,伊比利亚大区 (Iberian_Region),Basque_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,5500000,伊比利亚大区 (Iberian_Region),Aragon_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,7000000,伊比利亚大区 (Iberian_Region),Northern_Portugal_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,4500000,伊比利亚大区 (Iberian_Region),Alentejo_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,3800000,伊比利亚大区 (Iberian_Region),Balearic_Islands_Province

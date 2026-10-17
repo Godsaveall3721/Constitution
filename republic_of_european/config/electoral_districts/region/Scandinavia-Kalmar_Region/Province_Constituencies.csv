@@ -1,0 +1,15 @@
+# name,kind,label,seat_name,population,parent,basis_unit
+1号省选区 (Province_Constituency_001),省选区,-,-,1600000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Copenhagen_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,1800000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Stockholm_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,1200000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Oslo_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,1300000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Helsinki_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,7200000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Jutland_Province
+2号省选区 (Province_Constituency_002),省选区,-,-,6400000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Zealand_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,7600000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Götaland_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,7000000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Svealand_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,5000000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Norrland_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,4500000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Norwegian_Fjord_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,3800000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Tromsø_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,4200000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Finnish_Lakes_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,3600000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Lapland_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,2700000,斯堪的纳维亚-卡尔马大区 (Scandinavia-Kalmar_Region),Iceland_Province

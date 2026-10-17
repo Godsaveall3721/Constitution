@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+里昂公社 (Lyon_Commune),公社,中心城市,-,1000000,里昂广域市 (Lyon_Metropolitan_City)
+1号公社 (Lyon_Metropolitan_City_1_Commune),公社,-,-,500000,里昂广域市 (Lyon_Metropolitan_City)
+2号公社 (Lyon_Metropolitan_City_2_Commune),公社,-,-,500000,里昂广域市 (Lyon_Metropolitan_City)

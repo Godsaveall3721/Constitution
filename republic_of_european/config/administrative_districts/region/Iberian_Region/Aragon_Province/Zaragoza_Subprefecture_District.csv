@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+萨拉戈萨副公社 (Zaragoza_Subprefecture_Commune),公社,副省会,-,500000,萨拉戈萨副省区 (Zaragoza_Subprefecture_District)
+萨拉戈萨公社 (Zaragoza_Commune),公社,-,-,1000000,萨拉戈萨副省区 (Zaragoza_Subprefecture_District)
+1号公社 (Zaragoza_Subprefecture_District_1_Commune),公社,-,-,500000,萨拉戈萨副省区 (Zaragoza_Subprefecture_District)

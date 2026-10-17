@@ -1,0 +1,19 @@
+# name,kind,label,seat_name,population,parent,basis_unit
+1号省选区 (Province_Constituency_001),省选区,-,-,2600000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Vienna_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,2300000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Prague_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,2400000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Budapest_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2500000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Bucharest_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2000000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Belgrade_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,7800000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Upper_Austria_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,6200000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Tyrol_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,11000000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Bohemia_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,7600000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Moravia_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,5400000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Slovakia_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,15000000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Hungarian_Plain_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,3100000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Slovenia_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,4800000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Croatia_Coast_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,3900000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Bosnia_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,9800000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Transylvania_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,8900000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Wallachia_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,5100000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Northern_Bulgaria_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,3700000,奥匈-多瑙河大区 (Austria-Hungary-Danubia_Region),Sofia_Valley_Province

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+萨拉热窝副公社 (Sarajevo_Subprefecture_Commune),公社,副省会,-,500000,萨拉热窝副省区 (Sarajevo_Subprefecture_District)
+萨拉热窝公社 (Sarajevo_Commune),公社,-,-,700000,萨拉热窝副省区 (Sarajevo_Subprefecture_District)
+1号公社 (Sarajevo_Subprefecture_District_1_Commune),公社,-,-,500000,萨拉热窝副省区 (Sarajevo_Subprefecture_District)

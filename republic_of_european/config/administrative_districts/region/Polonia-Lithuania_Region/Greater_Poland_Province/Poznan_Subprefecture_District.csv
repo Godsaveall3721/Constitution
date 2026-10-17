@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+波兹南副公社 (Poznan_Subprefecture_Commune),公社,副省会,-,500000,波兹南副省区 (Poznan_Subprefecture_District)
+波兹南公社 (Poznan_Commune),公社,-,-,1100000,波兹南副省区 (Poznan_Subprefecture_District)
+1号公社 (Poznan_Subprefecture_District_1_Commune),公社,-,-,500000,波兹南副省区 (Poznan_Subprefecture_District)

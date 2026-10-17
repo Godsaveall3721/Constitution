@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+瓦莱塔公社 (Valletta_Commune),公社,省会,-,6000,1号省区 (Malta_Island_1_Arrondissement)
+1号公社 (Malta_Island_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Malta_Island_1_Arrondissement)
+2号公社 (Malta_Island_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Malta_Island_1_Arrondissement)

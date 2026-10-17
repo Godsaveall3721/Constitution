@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+戈尔韦副公社 (Galway_Subprefecture_Commune),公社,副省会,-,500000,戈尔韦副省区 (Galway_Subprefecture_District)
+戈尔韦公社 (Galway_Commune),公社,-,-,500000,戈尔韦副省区 (Galway_Subprefecture_District)
+1号公社 (Galway_Subprefecture_District_1_Commune),公社,-,-,500000,戈尔韦副省区 (Galway_Subprefecture_District)

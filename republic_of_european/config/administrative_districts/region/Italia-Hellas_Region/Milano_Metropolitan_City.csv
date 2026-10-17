@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+米兰公社 (Milano_Commune),公社,中心城市,-,1400000,米兰广域市 (Milano_Metropolitan_City)
+1号公社 (Milano_Metropolitan_City_1_Commune),公社,-,-,500000,米兰广域市 (Milano_Metropolitan_City)
+2号公社 (Milano_Metropolitan_City_2_Commune),公社,-,-,500000,米兰广域市 (Milano_Metropolitan_City)

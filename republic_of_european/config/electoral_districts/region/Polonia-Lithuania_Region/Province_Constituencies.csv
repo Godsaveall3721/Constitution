@@ -1,0 +1,18 @@
+# name,kind,label,seat_name,population,parent,basis_unit
+1号省选区 (Province_Constituency_001),省选区,-,-,3500000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Warsaw_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,3200000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Kyiv_Metropolitan_City
+1号省选区 (Province_Constituency_001),省选区,-,-,2500000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Minsk_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,1800000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Vilnius_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,2100000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Odesa_Metropolitan_City
+2号省选区 (Province_Constituency_002),省选区,-,-,12000000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Masovia_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,8000000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Greater_Poland_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,9000000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Silesia_Province
+3号省选区 (Province_Constituency_003),省选区,-,-,11000000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Galicia_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,4500000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Podlasie_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,2500000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Samogitia_Province
+4号省选区 (Province_Constituency_004),省选区,-,-,6000000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Latvia_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,3500000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Estonia_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,4200000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Polesia_Province
+5号省选区 (Province_Constituency_005),省选区,-,-,5200000,波兰-立陶宛大区 (Polonia-Lithuania_Region),West_Dnieper_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,5000000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Moldova_Province
+6号省选区 (Province_Constituency_006),省选区,-,-,3600000,波兰-立陶宛大区 (Polonia-Lithuania_Region),Crimea_Province

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+锡比乌副公社 (Sibiu_Subprefecture_Commune),公社,副省会,-,500000,锡比乌副省区 (Sibiu_Subprefecture_District)
+锡比乌公社 (Sibiu_Commune),公社,-,-,900000,锡比乌副省区 (Sibiu_Subprefecture_District)
+1号公社 (Sibiu_Subprefecture_District_1_Commune),公社,-,-,500000,锡比乌副省区 (Sibiu_Subprefecture_District)

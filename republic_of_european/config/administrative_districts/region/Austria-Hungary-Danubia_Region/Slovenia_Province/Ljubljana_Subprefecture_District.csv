@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+卢布尔雅那副公社 (Ljubljana_Subprefecture_Commune),公社,副省会,-,500000,卢布尔雅那副省区 (Ljubljana_Subprefecture_District)
+卢布尔雅那公社 (Ljubljana_Commune),公社,-,-,550000,卢布尔雅那副省区 (Ljubljana_Subprefecture_District)
+1号公社 (Ljubljana_Subprefecture_District_1_Commune),公社,-,-,500000,卢布尔雅那副省区 (Ljubljana_Subprefecture_District)

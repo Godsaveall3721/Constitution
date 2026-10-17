@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+贝尔法斯特副公社 (Belfast_Subprefecture_Commune),公社,副省会,-,500000,贝尔法斯特副省区 (Belfast_Subprefecture_District)
+贝尔法斯特公社 (Belfast_Commune),公社,-,-,900000,贝尔法斯特副省区 (Belfast_Subprefecture_District)
+1号公社 (Belfast_Subprefecture_District_1_Commune),公社,-,-,500000,贝尔法斯特副省区 (Belfast_Subprefecture_District)

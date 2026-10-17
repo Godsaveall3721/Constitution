@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+帕尔马副公社 (Palma_Subprefecture_Commune),公社,副省会,-,500000,帕尔马副省区 (Palma_Subprefecture_District)
+帕尔马公社 (Palma_Commune),公社,-,-,550000,帕尔马副省区 (Palma_Subprefecture_District)
+1号公社 (Palma_Subprefecture_District_1_Commune),公社,-,-,500000,帕尔马副省区 (Palma_Subprefecture_District)

@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+威尼斯公社 (Venice_Commune),公社,省会,-,250000,1号省区 (Veneto_1_Arrondissement)
+1号公社 (Veneto_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Veneto_1_Arrondissement)
+2号公社 (Veneto_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Veneto_1_Arrondissement)

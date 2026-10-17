@@ -1,0 +1,5 @@
+# name,kind,label,seat_name,population,parent
+塞纳副公社 (Seine_Subprefecture_Commune),公社,副省会,-,500000,塞纳副省区 (Seine_Subprefecture_District)
+1号公社 (Seine_Paris_Area_Commune),公社,-,-,2200000,塞纳副省区 (Seine_Subprefecture_District)
+凡尔赛公社 (Versailles_Commune),公社,-,-,1400000,塞纳副省区 (Seine_Subprefecture_District)
+塞纳公社 (Seine_Commune),公社,省会,-,700000,塞纳副省区 (Seine_Subprefecture_District)

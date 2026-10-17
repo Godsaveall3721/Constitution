@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+巴勒莫公社 (Palermo_Commune),公社,省会,-,630000,1号省区 (Sicily_1_Arrondissement)
+1号公社 (Sicily_1_Arrondissement_1_Commune),公社,-,-,500000,1号省区 (Sicily_1_Arrondissement)
+2号公社 (Sicily_1_Arrondissement_2_Commune),公社,-,-,500000,1号省区 (Sicily_1_Arrondissement)

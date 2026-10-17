@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+曼彻斯特公社 (Manchester_Commune),公社,中心城市,-,1000000,曼彻斯特广域市 (Manchester_Metropolitan_City)
+1号公社 (Manchester_Metropolitan_City_1_Commune),公社,-,-,500000,曼彻斯特广域市 (Manchester_Metropolitan_City)
+2号公社 (Manchester_Metropolitan_City_2_Commune),公社,-,-,500000,曼彻斯特广域市 (Manchester_Metropolitan_City)

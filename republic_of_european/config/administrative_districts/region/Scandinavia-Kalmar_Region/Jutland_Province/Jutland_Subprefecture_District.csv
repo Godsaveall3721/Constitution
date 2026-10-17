@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+日德兰副公社 (Jutland_Subprefecture_Commune),公社,副省会,-,500000,日德兰副省区 (Jutland_Subprefecture_District)
+奥胡斯公社 (Aarhus_Commune),公社,-,-,1100000,日德兰副省区 (Jutland_Subprefecture_District)
+日德兰公社 (Jutland_Commune),公社,省会,-,700000,日德兰副省区 (Jutland_Subprefecture_District)

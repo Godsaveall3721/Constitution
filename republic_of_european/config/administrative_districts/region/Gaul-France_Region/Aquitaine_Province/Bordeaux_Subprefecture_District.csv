@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+波尔多副公社 (Bordeaux_Subprefecture_Commune),公社,副省会,-,500000,波尔多副省区 (Bordeaux_Subprefecture_District)
+波尔多公社 (Bordeaux_Commune),公社,-,-,1500000,波尔多副省区 (Bordeaux_Subprefecture_District)
+1号公社 (Bordeaux_Subprefecture_District_1_Commune),公社,-,-,500000,波尔多副省区 (Bordeaux_Subprefecture_District)

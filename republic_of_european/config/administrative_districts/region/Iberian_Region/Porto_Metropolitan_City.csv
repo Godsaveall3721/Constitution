@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+波尔图公社 (Porto_Commune),公社,中心城市,-,1000000,波尔图广域市 (Porto_Metropolitan_City)
+1号公社 (Porto_Metropolitan_City_1_Commune),公社,-,-,500000,波尔图广域市 (Porto_Metropolitan_City)
+2号公社 (Porto_Metropolitan_City_2_Commune),公社,-,-,500000,波尔图广域市 (Porto_Metropolitan_City)
