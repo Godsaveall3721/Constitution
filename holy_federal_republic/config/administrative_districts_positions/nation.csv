@@ -1,0 +1,9 @@
+# name,kind,appointing_body,selection_method,term_years,basis_unit
+神圣联邦共和国联邦总统 (Holy_Federal_Republic_Federal_President),国家行政职位,各州选举人团,由各州选举人团选举产生；每届4年，可连任一届；不得兼任联邦国会议员,4,Holy_Federal_Republic
+联邦理事会主席 (Holy_Federal_Republic_Federal_Council_Chair),联邦理事会职位,联邦总统,由联邦总统当然兼任并主持理事会；常规及立法表决无投票权，特定僵局时行使裁决权,4,Holy_Federal_Republic_Federal_Council
+联邦理事会执行主席 (Holy_Federal_Republic_Federal_Council_Executive_Chair),联邦理事会职位,加盟州行政首长轮值,由各州行政首长轮值担任，协助主持日常会务；代行总统职权时退出轮值,0.0833333333333333,Holy_Federal_Republic_Federal_Council
+联邦国会议员 (Holy_Federal_Republic_Federal_Congress_Member),议会职位,联邦公民,由联邦公民选举产生；任内不得兼任联邦政府新增职位,4,Holy_Federal_Republic_Federal_Congress
+联邦行政部长 (Holy_Federal_Republic_Federal_Minister),国家行政职位,联邦总统、联邦国会及联邦理事会,总统任命；须经国会同意并由理事会核准，理事会收到文书15日未异议视为核准,-,Holy_Federal_Republic
+联邦驻外大使 (Holy_Federal_Republic_Ambassador),外交职位,联邦总统、联邦国会及联邦理事会,总统任命；须经国会同意并由理事会核准，理事会收到文书15日未异议视为核准,-,Holy_Federal_Republic
+联邦最高法院大法官 (Holy_Federal_Republic_Supreme_Court_Justice),司法职位,-,宪法未规定产生方式及任期,-,Holy_Federal_Republic_Supreme_Court
+各加盟州相关部级理事代表 (Holy_Federal_Republic_State_Minister_Council_Representative),联邦理事会职位,各加盟州,依议题由相关主管部级官员出席并代表该州表决；联邦宪法未规定统一任命方式或任期,-,Holy_Federal_Republic_Federal_Council
