@@ -7,6 +7,7 @@
 - `electoral_districts/nation.csv`：总统选举人团组成单位和联邦国会州级选举单位。
 - `parliament/nation.csv`：共同立法的联邦国会与联邦理事会。
 - `judicial_courts/nation.csv`：宪法明文提及的联邦最高法院及联邦宪法法院。
-- `administrative_districts_and_positions/`：联邦及加盟州在联邦理事会中的职位。
+- `administrative_districts_positions/`：联邦及加盟州的行政职位与联邦理事会职务。
+- `officials_and_parliamentary_list/`：职位模板与样本人员 ID 的映射；人员直接引用欧罗巴共和国公民名册。
 
 不补写宪法未规定的选举人及议员席额、国会内部结构、联邦理事会固定席数或法院任命办法。行政区划源数据中联邦人口为 550,000,000，而各加盟州人口之和为 623,800,000；本次保留原数据，不擅自改算或调平。
