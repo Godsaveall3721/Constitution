@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+波尔图公社委员会 (Porto_Commune_Municipal_Council),公社委员会,-,-,1000000,波尔图都会委员会 (Porto_Metropolitan_City_Metropolitan_Consiglio)
+1号公社委员会 (Porto_Metropolitan_City_1_Commune_Municipal_Council),公社委员会,-,-,500000,波尔图都会委员会 (Porto_Metropolitan_City_Metropolitan_Consiglio)
+2号公社委员会 (Porto_Metropolitan_City_2_Commune_Municipal_Council),公社委员会,-,-,500000,波尔图都会委员会 (Porto_Metropolitan_City_Metropolitan_Consiglio)

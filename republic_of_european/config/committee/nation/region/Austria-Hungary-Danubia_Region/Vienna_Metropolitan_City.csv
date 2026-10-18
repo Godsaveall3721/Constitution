@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+维也纳公社委员会 (Vienna_Commune_Municipal_Council),公社委员会,-,-,1000000,维也纳都会委员会 (Vienna_Metropolitan_City_Metropolitan_Consiglio)
+1号公社委员会 (Vienna_Metropolitan_City_1_Commune_Municipal_Council),公社委员会,-,-,500000,维也纳都会委员会 (Vienna_Metropolitan_City_Metropolitan_Consiglio)
+2号公社委员会 (Vienna_Metropolitan_City_2_Commune_Municipal_Council),公社委员会,-,-,500000,维也纳都会委员会 (Vienna_Metropolitan_City_Metropolitan_Consiglio)

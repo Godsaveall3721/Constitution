@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+里昂公社委员会 (Lyon_Commune_Municipal_Council),公社委员会,-,-,1000000,里昂都会委员会 (Lyon_Metropolitan_City_Metropolitan_Consiglio)
+1号公社委员会 (Lyon_Metropolitan_City_1_Commune_Municipal_Council),公社委员会,-,-,500000,里昂都会委员会 (Lyon_Metropolitan_City_Metropolitan_Consiglio)
+2号公社委员会 (Lyon_Metropolitan_City_2_Commune_Municipal_Council),公社委员会,-,-,500000,里昂都会委员会 (Lyon_Metropolitan_City_Metropolitan_Consiglio)

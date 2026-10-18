@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+斯德哥尔摩公社委员会 (Stockholm_Commune_Municipal_Council),公社委员会,-,-,1000000,斯德哥尔摩都会委员会 (Stockholm_Metropolitan_City_Metropolitan_Consiglio)
+1号公社委员会 (Stockholm_Metropolitan_City_1_Commune_Municipal_Council),公社委员会,-,-,500000,斯德哥尔摩都会委员会 (Stockholm_Metropolitan_City_Metropolitan_Consiglio)
+2号公社委员会 (Stockholm_Metropolitan_City_2_Commune_Municipal_Council),公社委员会,-,-,500000,斯德哥尔摩都会委员会 (Stockholm_Metropolitan_City_Metropolitan_Consiglio)

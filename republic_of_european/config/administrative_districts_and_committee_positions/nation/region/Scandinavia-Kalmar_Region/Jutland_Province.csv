@@ -1,0 +1,8 @@
+# name,kind,appointing_body,selection_method,term_years,basis_unit
+日德兰副省区副省长 (Jutland_Subprefecture_District_Sous_Prefet),行政职位,共和国政府（内政部会议）,任命,-,Jutland_Subprefecture_District
+日德兰副公社委员会委员 (Jutland_Subprefecture_Commune_Municipal_Council_Member),委员会职位,公民,公社内公民选举,7,Jutland_Subprefecture_Commune_Municipal_Council
+日德兰副公社市长兼公社委员会主席 (Jutland_Subprefecture_Commune_Maire_and_Municipal_Council_President),复合职位,公社委员会,由公社委员会选举,-,Jutland_Subprefecture_Commune_Municipal_Council
+奥胡斯公社委员会委员 (Aarhus_Commune_Municipal_Council_Member),委员会职位,公民,公社内公民选举,7,Aarhus_Commune_Municipal_Council
+奥胡斯公社市长兼公社委员会主席 (Aarhus_Commune_Maire_and_Municipal_Council_President),复合职位,公社委员会,由公社委员会选举,-,Aarhus_Commune_Municipal_Council
+日德兰公社委员会委员 (Jutland_Commune_Municipal_Council_Member),委员会职位,公民,公社内公民选举,7,Jutland_Commune_Municipal_Council
+日德兰公社市长兼公社委员会主席 (Jutland_Commune_Maire_and_Municipal_Council_President),复合职位,公社委员会,由公社委员会选举,-,Jutland_Commune_Municipal_Council

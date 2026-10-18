@@ -1,0 +1,5 @@
+# name,kind,label,seat_name,population,parent
+塞纳副公社委员会 (Seine_Subprefecture_Commune_Municipal_Council),公社委员会,-,-,500000,巴黎省委员会 (Paris_Province_Permanental_Commission)
+1号公社委员会 (Seine_Paris_Area_Commune_Municipal_Council),公社委员会,-,-,2200000,巴黎省委员会 (Paris_Province_Permanental_Commission)
+凡尔赛公社委员会 (Versailles_Commune_Municipal_Council),公社委员会,-,-,1400000,巴黎省委员会 (Paris_Province_Permanental_Commission)
+塞纳公社委员会 (Seine_Commune_Municipal_Council),公社委员会,-,-,700000,巴黎省委员会 (Paris_Province_Permanental_Commission)

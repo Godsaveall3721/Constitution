@@ -1,0 +1,8 @@
+# name,kind,appointing_body,selection_method,term_years,basis_unit
+马恩副省区副省长 (Marne_Subprefecture_District_Sous_Prefet),行政职位,共和国政府（内政部会议）,任命,-,Marne_Subprefecture_District
+马恩副公社委员会委员 (Marne_Subprefecture_Commune_Municipal_Council_Member),委员会职位,公民,公社内公民选举,7,Marne_Subprefecture_Commune_Municipal_Council
+马恩副公社市长兼公社委员会主席 (Marne_Subprefecture_Commune_Maire_and_Municipal_Council_President),复合职位,公社委员会,由公社委员会选举,-,Marne_Subprefecture_Commune_Municipal_Council
+勒阿弗尔公社委员会委员 (Le_Havre_Commune_Municipal_Council_Member),委员会职位,公民,公社内公民选举,7,Le_Havre_Commune_Municipal_Council
+勒阿弗尔公社市长兼公社委员会主席 (Le_Havre_Commune_Maire_and_Municipal_Council_President),复合职位,公社委员会,由公社委员会选举,-,Le_Havre_Commune_Municipal_Council
+马恩公社委员会委员 (Marne_Commune_Municipal_Council_Member),委员会职位,公民,公社内公民选举,7,Marne_Commune_Municipal_Council
+马恩公社市长兼公社委员会主席 (Marne_Commune_Maire_and_Municipal_Council_President),复合职位,公社委员会,由公社委员会选举,-,Marne_Commune_Municipal_Council
