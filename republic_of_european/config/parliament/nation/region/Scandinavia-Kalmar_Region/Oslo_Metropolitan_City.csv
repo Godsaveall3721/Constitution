@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+奥斯陆公社委员会 (Oslo_Commune_Municipal_Council),公社委员会,-,-,1000000,奥斯陆广域市议会 (Oslo_Metropolitan_City_Metropolitan_Council)
+1号公社委员会 (Oslo_Metropolitan_City_1_Commune_Municipal_Council),公社委员会,-,-,500000,奥斯陆广域市议会 (Oslo_Metropolitan_City_Metropolitan_Council)
+2号公社委员会 (Oslo_Metropolitan_City_2_Commune_Municipal_Council),公社委员会,-,-,500000,奥斯陆广域市议会 (Oslo_Metropolitan_City_Metropolitan_Council)

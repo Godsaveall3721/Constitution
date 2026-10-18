@@ -1,8 +1,10 @@
 # 选区配置
 
-每个大区使用 `region/<大区目录名>/` 保存选区映射：
+`nation.csv` 保存国家层级选区：启用总统公民直选时使用的全国单一整体选区、每个大区固定 7 席的参议院直选选区，以及参议院间选全国超级选区。间选超级选区以全部大区、省和广域市议会为基础单位，合并为一个可跨大区的选区；相同的选区名称和 ID 表示同一全国选区的组成单位，不是各自独立的区；公社委员会不属于间选单位。
 
-- `Province_Constituencies.csv`：省级选区，以省（Depaertments）和广域市（Metropolitan Citta）为组合基础单位。
+各大区的地方选举映射位于 `nation/region/<大区目录名>/`：
+
+- `Province_Constituencies.csv`：省级选区，以省和广域市为组合基础单位。
 - `Canton_Constituencies.csv`：县级选区，以同一省或广域市下的 2–3 个公社为组合基础单位；省区仅为辅助行政区划，不作为选区组成单位。
 
-CSV 表头为 `# name,kind,label,seat_name,population,parent,basis_unit`。组合选区会按基础单位逐行记录，因此同一选区名称可能出现多行；`basis_unit` 使用对应行政单位的稳定 ID。选区使用“1号省选区”“1号县选区”等编号名称。
+CSV 表头为 `# name,kind,label,seat_name,population,parent,basis_unit`。组合选区按基础单位逐行记录；同一选区名称及 ID 可重复，`basis_unit` 使用对应行政单位或议会单位的稳定 ID。

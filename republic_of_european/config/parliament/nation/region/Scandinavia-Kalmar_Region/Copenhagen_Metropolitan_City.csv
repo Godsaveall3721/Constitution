@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+哥本哈根公社委员会 (Copenhagen_Commune_Municipal_Council),公社委员会,-,-,1000000,哥本哈根广域市议会 (Copenhagen_Metropolitan_City_Metropolitan_Council)
+1号公社委员会 (Copenhagen_Metropolitan_City_1_Commune_Municipal_Council),公社委员会,-,-,500000,哥本哈根广域市议会 (Copenhagen_Metropolitan_City_Metropolitan_Council)
+2号公社委员会 (Copenhagen_Metropolitan_City_2_Commune_Municipal_Council),公社委员会,-,-,500000,哥本哈根广域市议会 (Copenhagen_Metropolitan_City_Metropolitan_Council)

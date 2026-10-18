@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+欧罗巴共和国国家议会 (Republic_of_European_National_Parliament),国家议会,-,-,550000000,-
+参议院 (Republic_of_European_Senate),参议院,-,-,550000000,欧罗巴共和国国家议会 (Republic_of_European_National_Parliament)
+众议院 (Republic_of_European_House_of_Representatives),众议院,-,-,550000000,欧罗巴共和国国家议会 (Republic_of_European_National_Parliament)

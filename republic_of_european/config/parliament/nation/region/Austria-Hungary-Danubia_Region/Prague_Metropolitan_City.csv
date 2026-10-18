@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+布拉格公社委员会 (Prague_Commune_Municipal_Council),公社委员会,-,-,1000000,布拉格广域市议会 (Prague_Metropolitan_City_Metropolitan_Council)
+1号公社委员会 (Prague_Metropolitan_City_1_Commune_Municipal_Council),公社委员会,-,-,500000,布拉格广域市议会 (Prague_Metropolitan_City_Metropolitan_Council)
+2号公社委员会 (Prague_Metropolitan_City_2_Commune_Municipal_Council),公社委员会,-,-,500000,布拉格广域市议会 (Prague_Metropolitan_City_Metropolitan_Council)

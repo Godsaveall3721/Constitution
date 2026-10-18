@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+卡迪夫公社委员会 (Cardiff_Commune_Municipal_Council),公社委员会,-,-,800000,威尔士省议会 (Wales_Province_Departmental_Council)
+卡迪夫副公社委员会 (Cardiff_Subprefecture_Commune_Municipal_Council),公社委员会,-,-,500000,威尔士省议会 (Wales_Province_Departmental_Council)
+1号公社委员会 (Cardiff_Subprefecture_District_1_Commune_Municipal_Council),公社委员会,-,-,500000,威尔士省议会 (Wales_Province_Departmental_Council)

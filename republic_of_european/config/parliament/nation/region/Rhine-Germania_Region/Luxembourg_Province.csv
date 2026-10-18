@@ -1,0 +1,4 @@
+# name,kind,label,seat_name,population,parent
+卢森堡公社委员会 (Luxembourg_Commune_Municipal_Council),公社委员会,-,-,500000,卢森堡省议会 (Luxembourg_Province_Departmental_Council)
+卢森堡副公社委员会 (Luxembourg_Subprefecture_Commune_Municipal_Council),公社委员会,-,-,500000,卢森堡省议会 (Luxembourg_Province_Departmental_Council)
+1号公社委员会 (Luxembourg_Subprefecture_District_1_Commune_Municipal_Council),公社委员会,-,-,500000,卢森堡省议会 (Luxembourg_Province_Departmental_Council)
